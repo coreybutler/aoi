@@ -1,0 +1,345 @@
+BODY{background:#333 !important;background-image: none;}
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+.item {
+  margin: 5px;
+  min-width: 20%;
+  border-radius: 3px;
+  color: #000;
+  background: #FFF;
+  padding: 1.5em;
+  border: 1px solid #E9E9E9;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.item hr {
+  height: 0px;
+  border: 0px;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #EFEFEF;
+  margin: 26px 0 16px 0;
+}
+
+.item h1 {
+  font-size: 320%;
+  margin: 0px !important;
+  color: #333 !important;
+  text-shadow: 0px 0px 2px #CCC !important;
+ /*text-shadow: none !important;*/
+}
+
+.item a h1 {
+  color: #003366 !important;
+  text-transform: none !important;
+}
+
+.item:hover {
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.item.tweet:hover, .item-tweet:hover {
+  box-shadow: none !important;
+}
+
+.item-tweet {
+  border: 0px;
+  background: transparent;
+  margin: -2px 0px 0px 0px !important;
+  padding: 0px 4px 0px 4px !important;
+  display: block;
+  min-height: 180px;
+  max-width: 300px;
+}
+
+.item-tweet blockquote {
+  background: #F4FBFD !important;
+}
+
+.item h3 {
+  text-transform: uppercase;
+}
+
+.item .date {
+  color: #aaa;
+  text-shadow: -1px -1px 1px #eee;
+  font-size:x-small;
+  margin-top:-16px;
+  position: absolute;
+}
+
+/*.item:hover {
+  border: 1px solid rgba(221,238,255,.8);
+  -webkit-box-shadow: rgba(221,238,255, .5) 4px 2px 4px 0px;
+}*/
+
+.protip h1 {
+  color: #336699 !important;
+}
+
+.tweet {
+  background: #F4FBFD !important;/*#4099FF;*/ 
+  padding: 1.5em;
+  /*font-family:'TeXGyreAdventor';*/
+  font-family: Asap, HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  color:#333333;
+  /*text-shadow: -1px 1px 1px #5ca6fa;
+  border-top: 1px solid #5ca6fa;*/
+ border-color: #FFFFFF;
+}
+
+.tweet .date {
+  /*color: #BFD8EB;
+  text-shadow: rgba(0, 0, 0, 0.298039) 1px 1px 0px;*/
+  font-size: x-small;
+  text-align: right;
+  margin-bottom:3px;
+  right: 15px;
+  bottom: 1px;
+  position: absolute;
+}
+
+.tweet span, .github span {
+  position: relative;
+  z-index: 2;
+}
+
+.github {
+  background-color: #F3F3F3;
+  background-image: -webkit-linear-gradient(top, #F9F9F9, #F3F3F3);
+  background-repeat: repeat-x;
+  color: #333;
+  display: block;
+  padding-top:70px;
+}
+
+.github:hover {
+  border: 1px solid rgba(221,238,255,.8);
+  -webkit-box-shadow: rgba(0,0,0,.2) 2px 2px 2px 0px;
+  border-left: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+}
+
+.github i {
+  margin: -62px 0px 0px -7px;
+  position: absolute;
+}
+
+.github i:before {
+  color: rgba(0,0,0,.1);
+  text-shadow: 1px 1px 3px rgba(255,255,255,.8);
+  clear: both;
+  display: block;
+}
+
+
+.footertitle {
+  color: #DDDDDD;
+  font-size: xx-small;
+  margin-top:0px;
+}
+
+.footertitle a {
+  color: #999;
+  padding: 4px;
+  font-size: larger;
+}
+
+.bitbucket .date,
+.github .date {
+  position: absolute;
+  margin: -26px 0px 10px 46px;
+}
+
+.github .date {
+  margin: -26px 0px 10px 61px;
+}
+
+.github .repo {
+  color: #222;
+  padding: 0px 6px 0px 6px;
+  position: absolute;
+  margin: -53px 0px 0px 55px;
+  -moz-border-radius-topleft: 10px; /* Firefox */
+  -webkit-border-top-left-radius: 10px; /* Safari, Chrome */
+  border-top-left-radius: 10px; /* CSS3 */
+  -moz-border-radius-bottomleft: 10px; /* Firefox */
+  -webkit-border-bottom-left-radius: 10px; /* Safari, Chrome */
+  border-bottom-left-radius: 10px; /* CSS3 */
+}
+
+.bitbucket {
+  background-color: rgba(0,51,102,1);
+  background-image: url(../img/cookbook/bitbucket.png);
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: 20px 20px !important;
+  color: #fff;
+  display: block;
+  padding-top:70px;
+}
+
+.bitbucket .date {
+  color: #eee;
+  text-shadow: none;
+}
+
+.bitbucket .repo {
+  color: #fefefe !important;
+}
+
+.bitbucket .repo {
+  color: #222;
+  padding: 0px 6px 0px 6px;
+  position: absolute;
+  margin: -53px 0px 0px 40px;
+  -moz-border-radius-topleft: 10px; /* Firefox */
+  -webkit-border-top-left-radius: 10px; /* Safari, Chrome */
+  border-top-left-radius: 10px; /* CSS3 */
+  -moz-border-radius-bottomleft: 10px; /* Firefox */
+  -webkit-border-bottom-left-radius: 10px; /* Safari, Chrome */
+  border-bottom-left-radius: 10px; /* CSS3 */
+}
+
+
+.contrast {
+  background:#222222;
+  color: #FFFFFF; 
+}
+
+.contrast.red,
+.contrast .red {
+  color: #EC534D;
+}
+
+.contrast.green,
+.contrast .green {
+  color: #9CBD5A;
+}
+
+.contrast.blue,
+.contrast .blue {
+  color: #48B;
+}
+
+.item-tweet.mark:after {
+  top: 1px !important;
+  right: 85px !important;
+}
+
+.bitbucket.mark:after {
+  top: -5px;
+}
+
+.mark:after {
+  z-index: 15;
+  content:'';
+  position: absolute;
+  right: 6px;
+  top: -6px;
+  height: 45px;
+  width: 45px;
+  background-image: url(../img/cookbook/badge-2.png);
+}
+
+.mark.hot:after {
+  background-position: 0 0;
+}
+.mark.new:after {
+  background-position: 0 -45px;
+}
+.mark.top:after {
+  background-position: 0 -90px;
+}
+.mark.video:after {
+  background-position: 0 -135px;
+}
+.mark.audio:after {
+  background-position: 0 -180px;
+}
+.mark.image:after {
+  background-position: 0 -225px;
+}
+.mark.quote:after {
+  background-position: 0 -270px;
+}
+
+.bitbucket a:hover h3,
+.github a:hover h3 {
+  text-shadow: 1px 1px 6px #cfcfcf;
+  text-decoration: none !important;
+}
+
+
+.item a:hover {
+  text-decoration: none;
+}
+.item a:hover h1 {
+  color: #336699 !important;
+  text-decoration: none !important;
+}
+
+.readmore {
+  clear:both;
+  float: right;
+  margin:-2px 0px 10px 0px;
+  background: rgba(238,238,238,.25);
+  padding: 0px 16px 0px 16px;
+  border-radius: 2px;
+  border: 1px solid #eeeeee;
+  text-shadow: 1px 1px 3px #fff;
+}
+.item:hover > .readmore a h4,
+.readmore:hover a h4 {color: #FFFFFF !important;text-shadow: none;}
+.readmore:hover {
+  background: rgba(238,238,238,.65);
+}
+.item:hover > .readmore {
+  background: #2D89EF;
+  border-radius: 4px;
+}

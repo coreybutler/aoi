@@ -1,0 +1,9 @@
+pre.highlighted {
+    border: 1px solid #eee;
+    padding: 0px !important;
+}
+
+code {
+  font-family: Monaco, Consolas, Courier;
+  font-size: 105% !important;
+}

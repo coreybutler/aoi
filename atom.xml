@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>The Art of Idea</title>
+    <subtitle>The blog of Corey Butler.</subtitle>
+    <link href="http://artofidea.com/atom.xml" rel="self" />
+    <link href="The blog of Corey Butler." />
+    <updated>2013-02-11T23:07:25.972Z</updated>
+    <id>http://artofidea.com</id>
+    <author>
+        <name>Corey Butler</name>
+        <email>corey@artofidea.com</email>
+    </author>
+
+    
+</feed>
