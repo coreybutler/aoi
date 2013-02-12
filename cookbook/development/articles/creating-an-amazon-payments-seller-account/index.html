@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Art of Idea: Creating an Amazon Payments Seller Account</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Powered-By" content="DocPad"/>
+    <meta name="description" content="If you're interested in integrating Amazon Payments into your website, the first step is to setup a 
+seller account at [Amazon Payments](http://payments.amazon.com).
+
+![Amazon Payments](../../../img/blog/signup.png)
+
+">
+    <meta name="author" content="Corey Butler (corey@artofidea.com)">
+    <meta name="keywords" content="goldglovecb, corey, butler, corey butler, node.js, javascript, ngn, thinkfirst, entrepreneur, coldfusion, ajax, html, web development, web design, git, programming, hacking, hackathon">
+  
+    <!-- Social SEO -->
+    <meta property="og:title" content="function () {
+        if (this.document.title) {
+          return "" + this.site.title + ": " + this.document.title;
+        } else {
+          return this.site.title;
+        }
+      }" />
+    <meta property="og:description" content="function () {
+        return this.document.description || this.document.summary || this.document.body.substring(0, this.document.body.indexOf('<!-- more -->')) || this.site.description;
+      }" />
+    
+    <meta property="og:type" content="website" />
+    
+    <meta property="og:author" content="Corey Butler (corey@artofidea.com)" />
+    <meta property="og:site_name" content="The Art of Idea" />
+    <meta property="og:locale" content="en" />
+  
+    <!-- Styling -->
+    <link  rel="stylesheet" href="/../../css/aoi.css" /><link  rel="stylesheet" href="/../../css/aoi-responsive.css" />
+    <link  rel="stylesheet" href="/../../metro/css/modern.css" /><link  rel="stylesheet" href="/../../metro/css/modern-responsive.css" />
+    
+        <link  rel="stylesheet" href="/../../css/github.css" /><link  rel="stylesheet" href="/../../css/code.css" />
+    
+    
+    
+        <link  rel="stylesheet" href="/../../css/post.css" />
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="/css/font-awesome-ie7.css"><![endif]-->
+
+    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/b8a1284b0d0202c5866d40c04b8bd842?s=16">
+  </head>
+
+  <body>
+  <div class="nav-bar bg-color-blue">
+    <div class="nav-bar-inner padding10">
+      <div class="page">
+        <div class="tb"><div class="nav-bar bg-color-blue">
+  <div class="nav-bar-inner padding10">
+    <ul class="menu">
+      <li><a href="http://artofidea.com"><i class="icon-home"></i></a></li>
+      <li class="divider"></li>
+      
+        
+          <li><a href="http://artofidea.com/about">The Art of Idea</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com/cookbook/development">Inspiration</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com">Career</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com">Entrepreneurship</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com">Ventures</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com#">Corey Butler</a></li>
+        
+      
+      <li class="divider"></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Follow&nbsp;on&nbsp;Google+" href="https://plus.google.com/111169756342687497578?rel=author" target="_blank"><i class="icon icon-google-plus"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Connect&nbsp;on&nbsp;LinkedIn" href="http://www.linked.com/in/coreyabutler" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Projects&nbsp;on&nbsp;Github" href="http://github.com/coreybutler" target="_blank"><i class="icon icon-github"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Follow&nbsp;@goldglovecb" href="http://twitter.com/goldglovecb" target="_blank"><i class="icon icon-twitter"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Call&nbsp;me&nbsp;on&nbsp;Clarity.fm" href="https://clarity.fm/coreybutler" target="_blank"><i class="icon icon-phone"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="RSS&nbsp;Feed" href="http://github.com/coreybutler" target="_blank"><i class="icon icon-feed"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Subscribe" href="http://github.com/coreybutler" target="_blank"><i class="icon icon-mail"></i></a></li>
+    </ul>
+  </div>
+</div>
+</div>
+        <h1 class="title">Creating an Amazon Payments Seller Account</h1>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+    <span class="subtitle">Published on Wednesday, January 19, 2011 by Corey Butler</span>
+    <div class="page-region">
+      <div class="page-region-content post">
+        <p>If you&#39;re interested in integrating Amazon Payments into your website, the first step is to setup a 
+seller account at <a href="http://payments.amazon.com">Amazon Payments</a>.</p>
+<p><img src="../../../img/blog/signup.png" alt="Amazon Payments"></p>
+<!-- more -->
+
+<p>Amazon clearly states right up front that you&#39;ll need to provide your business name, address, and 
+contact information. You also need to provide a personal credit card number and billing address. 
+If you&#39;re like me, that requirement threw up a red flag. As an integrator/developer working on a 
+website for a client, I wasn&#39;t very keen on handing out this information. However; you are the owner 
+of the account, not your client. Amazon Payments supports integrators. In the end, you will not be 
+handing your credit card information to anyone, but it&#39;s not very clear on the signup page. You&#39;ll 
+also be required to provide a phone number where you can be reached during the registration process. 
+This is undoubtedly to keep illegitimate programmers from setting up false accounts and for providing 
+help if necessary through the process. To date, I have not received any spam, phone calls, or 
+anything else annoying from Amazon.</p>
+<h2>Configure The Development Sandbox</h2>
+<p>Once your registration is processed, it&#39;s time to configure your account for development. First and 
+foremost, <strong>make sure your account is setup to use sandbox mode</strong>. You can configure this by selecting 
+the sandbox from the dropdown at the top of the screen (as shown in #1). You should also see the 
+<code>Switch to Production</code> box shown in #2. Once the account is configured as a sandbox, basic parameters 
+must be configured for your website. Start by reading the materials in integration central shown in #3.</p>
+<p><img src="../../../img/blog/sellercentral.png" alt="Amazon Payments Seller Central"></p>
+<p>Integration Central provides all of the documentation you need to integrate Checkout by Amazon into your 
+website. There are plenty of examples for languages of all types including Java, PHP, .NET/C#, and ColdFusion. 
+If you&#39;re a ColdFusion developer, you already have a starting point. See my article on Using ColdFusion with 
+Amazon Payments.</p>
+<h2>Obtain Access Keys</h2>
+<p>There are two very important links on the Integration Central toolbar. The Access Key page contains your 
+access key and secret access key. You will need these in your code to generate unique signatures for API 
+requests.</p>
+<p><img height="451" width="650" alt="Amazon Payments Access Keys" src="../../../img/blog/accesskey.png" align="middle" /></p>
+<h2>Error Console</h2>
+<p>Integration Central also has a tool called the Error Console. This tool is very helpful for identifying 
+problems that occur on Amazon servers. The screenshot below shows an example of what you might see if 
+you were working with the Callback API.</p>
+<p><img height="383" width="650" alt="Amazon Payments Integration Error Console" src="../../../img/blog/errorconsole.png" align="middle" /></p>
+<p>Clicking on a specific error will provide you with additional detail specific to the API you&#39;re working with. For 
+example, the Callback API contains a general error, the response received by Amazon, the callback request Amazon 
+sent to your server, the original callback request sent by Amazon, and the original cart request sent from your 
+website to Amazon. To top this off, the very bottom of the page provides steps to resolve known/common issues. 
+Keep this tool in mind as you develop. It can save a lot of time and headaches!</p>
+<h2>Settings</h2>
+<p><img height="263" width="192" alt="Amazon Payments Integration Settings" src="../../../img/blog/settings.png" align="right" />
+There are a few settings that need to be configured. The list of settings is available under the last main tab of the page.</p>
+<p>First, your account is assigned a Merchant Token, which is necessary for the XML submitted to Amazon on each API call. 
+This number is found under Account Info at the very bottom of the page.</p>
+<h3>Shipping Settings, Manage Taxes, &amp; Manage Promotions</h3>
+<p>The settings in each of these sections are used as defaults when a user submits a new order through your website. However; 
+no changes are required to start integrating Checkout by Amazon into your website. These settings can be overwritten 
+programmatically using the Callback API.</p>
+<h3>Checkout Pipeline Settings</h3>
+<p>This is the most important section that requires the most attention. This is where you set general &quot;pipeline&quot; settings, 
+configure Instant Payment Notification, and find your Merchant ID (which is NOT the same as your Merchant Token).</p>
+<p><img height="562" width="650" alt="Amazon Payments Checkout Pipeline Settings" src="../../../img/blog/checkoutpipeline.png" align="middle" /></p>
+<p>The Checkout Pipeline Settings defines &quot;redirect&quot; URL&#39;s. These are the locations where Amazon will direct a user&#39;s 
+browser upon a certain event (such as successful payment). This section is also where shopping cart security can be 
+enabled. This setting determines whether Amazon will accept XML-based shopping carts with or without a signature. 
+This can be disabled for development purposes, but is required for production use.</p>
+<p><em>It is better to enable secure carts right from the beginning of development. For the most part, there is no functional</em>
+<em>difference between a secure/insecure cart. However; secure carts require proper use of SSL on the server side. For many</em>
+<em>developers, this is more of a stumbling block than writing code. Your web server must have a recognizable SSL certificate</em>
+<em>installed in order to communicate with Amazon. If you are a ColdFusion developer, this means the Amazon SSL certificate</em>
+<em>must be imported into the keystore (covered in the <a href="./using-coldfusion-with-amazon-payments/">Using ColdFusion with Amazon Payments</a>).</em></p>
+<h2>Conclusion</h2>
+<p>Once you have configured your seller account, it&#39;s time to start developing! If you didn&#39;t look at the documentation in 
+Integration Central, it is a good idea to at least review it. If you are looking to integrate Checkout by Amazon into a 
+ColdFusion website, please check out my article on <a href="./using-coldfusion-with-amazon-payments/">Using ColdFusion with Amazon Payments</a>.</p>
+
+        <span class="row-fluid">
+          <div class="span12">
+            <div style="float: right;">
+              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartofidea.com%2Fcookbook%5Cdevelopment%5Carticles%2Fcreating-an-amazon-payments-seller-account&amp;send=false&amp;layout=button_count&amp;width=105&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
+              <div class="g-plusone" data-size="medium"></div>
+<script type="text/javascript">(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/plusone.js',s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-count="" data-via="goldglovecb" data-size="small" data-hashtags="artofidea,amazon,coldfusion,cfamazon">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/Share" data-counter="right" data-showzero="true"></script>
+            </div>  
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="page related">
+    <h2>More Articles:</h2>
+    <ol>
+    
+      <li><a href="/cookbook\development\articles/using-coldfusion-with-amazon-payments">Using ColdFusion with Amazon Payments</a> (1/26/2011)</li>
+    
+    </ol>
+  </div>
+  
+  
+  <div class="page comments">
+    <h2>Comments</h2>
+    <!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        window.disqus_shortname = 'artofidea';
+        window.disqus_developer = 0;
+        window.disqus_url = document.location.href;
+        window.disqus_identifier = 'services-disqus';
+        window.disqus_title = 'disqus.html';
+        if ( window.DISQUS ) {
+            return DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = window.disqus_identifier;
+                    this.page.url = window.disqus_url;
+                    this.page.title = window.disqus_title;
+                }
+            });
+        }
+        else {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+    
+    <a href="#" class="scrollup"></a>
+    
+    <script defer="defer"  src="/../../js/jquery.js"></script><script defer="defer"  src="/../../js/bootstrap-tooltip-min.js"></script><script defer="defer"  src="/../../js/jquery.scrollto-1.4.3.1-min.js"></script><script defer="defer"  src="/../../js/jquery.localscroll-1.2.7-min.js"></script><script defer="defer"  src="/../../js/common.js"></script>
+    
+    
+    
+  </body>
+</html>

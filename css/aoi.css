@@ -1,0 +1,314 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);*/
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,700);
+@font-face {
+  font-family: 'iconFont';
+  src: url('../font/iconFont.eot');
+  src: url('../font/iconFont.eot?#iefix') format('embedded-opentype'), url('../font/iconFont.svg#iconFont') format('svg'), url('../font/iconFont.woff') format('woff'), url('../font/iconFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Serif Caption";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Serif Caption"), local("PTSerif-Caption"), url(http://themes.googleusercontent.com/static/fonts/ptserifcaption/v4/7xkFOeTxxO1GMC1suOUYWWhBabBbEjGd1iRmpyoZukE.woff) format('woff');
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzJ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hp1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+body {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-color: rgba(33, 33, 44, 0.75);
+  background-image: url(../img/background.png);
+  color: #333;
+  overflow-x: hidden;
+}
+
+.page {
+  max-width: 1000px !important;
+  margin: auto;
+}
+
+#toolbar {
+  font-family: 'Segoe WP', 'Segoe UI', 'Open Sans', sans-serif;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: /*#0F7CCC;*/#333333;
+  padding: 20px 10px 10px 10px;
+  display: block;
+  clear: both;
+  /*-moz-box-shadow:    inset 0 0 10px #FFF;
+   -webkit-box-shadow: inset 0 0 10px #FFF;
+   box-shadow:         inset 0 0 10px #FFF;*/
+  font-size: 12pt;
+}
+
+#toolbar div {
+  float: none;
+  clear: both;
+}
+
+#toolbar a {
+  display: block;
+  clear: both;
+  border: none !important;
+  color: #EFEFEF;
+}
+
+#toolbar a:hover {
+  text-decoration: none;
+}
+
+#logo {
+  font-family: "Yanone Kaffeesatz", "Segoe WP", "Segoe UI", "Open Sans", sans-serif;
+  font-size:160%;
+  color:#fff;
+  text-shadow: 1px 0px 3px #336699;
+}
+
+#logo span:first-child,
+#logo span:nth-child(3) {
+  color: #CDCDCD;
+}
+#contentshell {
+  padding: 10px 10px 10px 45px;
+}
+
+/*
+#quicknav {
+  z-index: 15;
+  position: fixed;
+  left: 15px;
+  bottom: 4%;
+  text-shadow: 0px 0px 4px #999;
+  text-decoration: none !important;
+}
+
+#quicknav a {
+  text-decoration: none;
+  clear: both;
+  display: block;
+}
+
+#quicknav a i {
+  min-width: 25px;
+  min-height: 25px;
+  display: block;
+}
+
+#quicknav a i:before {
+  color: #fff;
+  clear: both;
+  display: block;
+}
+#quicknav a:hover {
+  text-shadow: 0px 0px 4px #336699;
+}
+#quicknav a:hover i:before {
+  color: #FFF !important;
+}
+#quicknav a img:hover {
+  -moz-box-shadow: 0px 0px 4px #336699;
+  -webkit-box-shadow: 0px 0px 4px #336699;
+  box-shadow: 0px 0px 4px #336699;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#336699')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#336699');
+}
+#quicknav a img {
+  margin-bottom: 8px;
+}
+*/
+img.circle, img.panel, #quicknav a img {
+  -moz-box-shadow: 0px 0px 4px #fff;
+  -webkit-box-shadow: 0px 0px 4px #fff;
+  box-shadow: 0px 0px 4px #fff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#fff')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#fff');
+}
+
+img.circle {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+}
+
+img.panel {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.subtitle {
+    font-size: 80%;
+    color: #aaa;
+    text-shadow: -1px 1px #fff;
+    margin-top:8px !important;
+}
+
+.scrollup {
+  z-index: 100;
+  width:40px;
+  height:40px;
+  opacity:0.4;
+  position:fixed;
+  bottom:10%;
+  right:2%;
+  display:none;
+  text-indent:-9999px;
+  background: url(../img/arrow-up.png) no-repeat;
+}
+
+/*
+h1, h2, h3, h4, h5 {
+  font-weight: 00;
+  font-family: 'Yanone Kaffeesatz', Helvetica, sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 90px;
+  line-height: 80px;
+  color: #efefef !important;
+  text-shadow: 2px 2px 6px #666;
+}
+*/
+
+/*!
+ * Bootstrap v2.3.0
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  visibility: visible;
+  font-size: 11px;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.tooltip.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}

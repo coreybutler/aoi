@@ -1,0 +1,227 @@
+body {
+  background: #FFFFFF url(../img/background.png) !important;
+}
+.page {
+  padding: 0px 30px 20px 30px;
+  background: #FFFFFF !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 8px #DEDEDE;
+}
+
+#tldr .page {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.tb {
+  margin-left:-5px;
+}
+.tb .nav-bar-inner {
+  padding: 0px 0px 0px 0px !important;
+}
+.tb ul.menu li.divider {
+  border-right: 0px solid rgba(255,255,255,.35) !important;
+}
+.tb ul.menu li a {
+  color: rgba(255,255,255,.35) !important;
+}
+.navbar {
+  position: absolute;
+  z-index: 1500;
+}
+.navbar #toolbar h2,
+.tab h1 {
+  text-decoration: none;
+  border: 0px !important;
+  margin: 0px;
+  color: #999;
+}
+
+.tab h1 {
+  font-size: 150%;
+  margin: 0px !important;
+}
+.tab {
+  z-index: 1490;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  background: rgba(0,0,0,.6);
+  float: right;
+  color: #FFF;
+}
+
+.nav-bar-inner .page {
+  background: none !important;
+  margin-top: 0px;
+  margin-bottom : 0px;
+  padding:0px;
+  box-shadow: none !important;
+}
+.post {
+  color: #232323;
+  text-shadow: 0px 0px 1px #BDBDBD;
+  font-size: 120%;
+  font-family: 'Segoe WP', 'Segoe UI', 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.post a {
+  text-shadow: 0px 0px 1px #EFEFEF;
+}
+
+pre {
+  margin: 20px 0 20px 0;
+}
+
+h2,h3,h4,h5 {
+  font-family: Helvetica;
+  margin:22px 0px 22px 0px;
+}
+
+h2, h3 {
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.highlighted code {
+  font-size: 135%;
+}
+
+#logo {
+  margin:55px 0px 0px -58px;
+  -webkit-transform:rotate(-90deg);
+  -moz-transform:rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  white-space:nowrap;
+  display:block; 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
+  text-shadow: 0px 0px 1px #999;
+}
+
+h1.title {
+  color: #FFFFFF !important;
+  text-shadow: 0px 0px 2px #EFEFEF;
+}
+
+.subtitle {
+    font-size: 80%;
+    color: #ccc;
+    text-shadow: -1px 1px #fff;
+}
+
+#tldr {
+  position: fixed;
+  z-index:500;
+  top: -600px;
+  left: 0;
+  max-height: 500px;
+  overflow-y: auto;
+    
+  -moz-box-shadow: 3px 3px 4px #999;
+  -webkit-box-shadow: 3px 3px 4px #999;
+  box-shadow: 0px 0px 4px #eee;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');
+  background: rgba(0,0,0,.9);/* url(../img/dark_mosaic.png);*/
+  color: #efefef;
+  /*border-top: 1px solid #ccc;*/
+  border-top: 4px solid /*rgba(0,174,255,.87)*/rgba(43,86,151,1);
+  text-indent: 23px;
+  min-height: 80px; 
+  height:auto !important; 
+  width: 100%;
+}
+
+#tldr div {
+  padding: 25px;
+}
+
+#tldrtab {
+  background: #131313 url(../img/arrow-down.png);
+  background-position: 90%;
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: 900;
+  top: 0px;
+  right: 10px;
+  color: #fff;
+  font-size: 150%;
+  padding: 10px;
+  font-family: Helvetica, 'Yanone Kaffeesatz', Arial, sans-serif;
+  -moz-border-radius-bottomleft: 3px; /* Firefox */
+  -webkit-border-bottom-left-radius: 3px; /* Safari, Chrome */
+  border-bottom-left-radius: 3px; /* CSS3 */
+  -moz-border-radius-bottomright: 3px; /* Firefox */
+  -webkit-border-bottom-right-radius: 3px; /* Safari, Chrome */
+  border-bottom-right-radius:3px; /* CSS3 */
+  padding-right:50px !important;
+}
+
+.tldr {
+    padding: 1px 4px 1px 4px;
+    color: #333;
+    background: #f9fccf;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-shadow: 0px 1px 1px #666;
+    margin-left: 0px;
+    margin-top: -10px;
+    position: absolute;
+}
+blockquote p {
+  /*font: 14px/18px normal "Courier New";*/
+ text-shadow: 1px 0px 1px #555;
+}
+
+blockquote {
+  -moz-box-shadow: 3px 3px 4px #999;
+  -webkit-box-shadow: 3px 3px 4px #999;
+  box-shadow: 3px 3px 4px #999;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');
+  padding: 12px 60px 2px 60px;
+  background: #333 url(../img/quoteopencode.gif) no-repeat scroll 10px 0;
+  color: #efefef;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 15px 15px 15px 5px;
+  background-position: middle left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+  min-height: 80px; 
+  height:auto !important; 
+  height: 80px;
+  border-radius: 6px;
+}
+
+blockquote:after {
+  z-index: 15;
+  margin-top: -58px;
+  margin-right: -50px;
+  background: url(../img/quoteclosecode.gif) no-repeat scroll bottom right;   
+  padding-right: 0px;
+  display: block;
+  width:auto;
+  min-height: 90px; 
+  height:auto !important; 
+  height: 90px;
+}
