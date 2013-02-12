@@ -4,12 +4,648 @@
     <subtitle>The blog of Corey Butler.</subtitle>
     <link href="http://artofidea.com/atom.xml" rel="self" />
     <link href="The blog of Corey Butler." />
-    <updated>2013-02-12T19:39:43.785Z</updated>
+    <updated>2013-02-12T21:25:42.334Z</updated>
     <id>http://artofidea.com</id>
     <author>
         <name>Corey Butler</name>
         <email>corey@artofidea.com</email>
     </author>
-
     
+    <entry>
+      <title>Docpad Wins!</title>
+      <link href="http://artofidea.com/cookbook\development\articles/goodbye-tumblr"/>
+      <updated>2013-02-11T06:00:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/goodbye-tumblr</id>
+      <content type="html">&lt;p&gt;After evaluating Tumblr, Blogger, Wordpress, Octopress, &lt;a href=&quot;http://www.blogcfc.com/&quot;&gt;BlogCFC&lt;/a&gt; (I did a lot of CF work), and 
+several others, I finally settled on &lt;a href=&quot;http://docpad.org/&quot;&gt;Docpad&lt;/a&gt; to manage
+the content of this site.&lt;/p&gt;
+&lt;p&gt;&lt;!-- more --&gt;&lt;/p&gt;
+&lt;div id=&quot;tldr&quot;&gt;
+  &lt;li&gt;Tired of Tumblr&amp;#39;s downtime.&lt;/li&gt;
+  &lt;li&gt;Tried Octopress - perfer JavaScript to Ruby.&lt;/li&gt;
+  &lt;li&gt;Docpad isn&amp;#39;t perfect, but it works well for me!&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;What Happened to Tumblr &amp;amp; Octopress?&lt;/h2&gt;
+&lt;p&gt;Earlier this year I converted my blog from Tumblr to Octopress. Tumblr is
+pretty cool with it&amp;#39;s follow feature and reblog capability, but I
+grew really tired of outages. While site outages can be tolerated
+from time to time, the part that bothered most readers was how often
+the static assets (images) would be missing. Plus, it was painful to upload 
+images. However; the static serving capability of Tumblr is what really 
+turned me off from it. Images wouldn&amp;#39;t load, making some tutorials kind 
+of hard to follow. It prevented me from writing because I knew I&amp;#39;d have to 
+deal with it. I also found the process of customizing your design 
+exceptionally painful. While I knew it would be tough to leave behind the 
+ease of &amp;quot;login and post&amp;quot; workflow, it had to be done. &lt;/p&gt;
+&lt;p&gt;At the time of initial conversion, I thought it would be great to get my 
+hands dirty with Ruby. I was able to put together a decent site with Octopress, 
+but I grew tired of not being as proficient as I&amp;#39;d like with
+the language. Ruby isn&amp;#39;t that hard, &amp;amp; I&amp;#39;m glad to experience it, but I 
+wasn&amp;#39;t putting out any new content. There comes a time when you simply get
+tired of the sheer volume of technology that is available. It&amp;#39;s sort of like
+certifications... after I hit my 18th certification, the point of it all
+was pretty much lost.&lt;/p&gt;
+&lt;p&gt;The worst kind of blog is one that... isn&amp;#39;t. Mine was that blog. You know,
+the one everyone starts up in January and follows up with their next post
+the following December. Posts haven&amp;#39;t come because I don&amp;#39;t have the 
+time to commit to a new language right now.&lt;/p&gt;
+&lt;p&gt;I&amp;#39;ve been developing with JavaScript for a few years now. I utilize the
+entire &lt;a href=&quot;http://www.sencha.com&quot;&gt;Sencha&lt;/a&gt; suite, as well as jQuery and many other libraries. 
+However; most of my recent time is spent working with &lt;a href=&quot;http://nodejs.org&quot;&gt;node.js&lt;/a&gt;.
+As the idea for this site became more than just a blog, I realized I really wanted
+something I could just crank through. So, I finally took the plunge and
+adopted Docpad.&lt;/p&gt;
+&lt;h2&gt;What is Docpad?&lt;/h2&gt;
+&lt;p&gt;Docpad is similar to Octopress in the sense that it generates a static site,
+but it&amp;#39;s based on node.js. There are plugins and a community around it, and the
+author is responsive on github.&lt;/p&gt;
+&lt;p&gt;The most important thing for me is workflow when I&amp;#39;m writing. When inspiration
+strikes, I want to write it down and push it out to the web. I really wanted
+to use Github Flavored Markedown for my posts which contain code, and Docpad
+has a plugin for that. It&amp;#39;s a bit more configurable than the one that came
+with Octopress. &lt;/p&gt;
+&lt;p&gt;I also wanted to customize how the site was built, and the docpad config provides
+a simple way to add my own functionality for the build process. &lt;/p&gt;
+&lt;p&gt;Docpad isn&amp;#39;t perfect. It utilizes &lt;a href=&quot;http://coffeescript.org&quot;&gt;coffeescsript&lt;/a&gt;, which
+I am not exactly fond of. There were also some issues, but I got them worked out
+thanks to the github issue board. I also feel the structure of a docpad site is
+a little funky. For example, the &lt;code&gt;css&lt;/code&gt; directory exists inside the document source
+folder while the &lt;code&gt;js&lt;/code&gt; files exist in a separate static &amp;quot;files&amp;quot; directory. It&amp;#39;s a
+little strange feeling, but it&amp;#39;s managable.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Though Docpad isn&amp;#39;t perfect, I feel much more at home with it and its node.js
+roots. So, that means more articles, tips, and tutorials will be hitting this
+site soon!&lt;/p&gt;
+</content>
+    </entry>
+  
+    <entry>
+      <title>NodeJS &amp; Microsoft Azure</title>
+      <link href="http://artofidea.com/cookbook\development\articles/nodejs-and-microsoft-azure"/>
+      <updated>2011-12-11T14:14:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/nodejs-and-microsoft-azure</id>
+      <content type="html">&lt;p&gt;I&amp;#39;ve been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
+NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
+was loaned. Seeing as my desktop is a workhorse that&amp;#39;s more powerful than the combined computing 
+power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
+quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
+writing ANT build scripts to automatically upload my changes to my virtual server.&lt;/p&gt;
+&lt;p&gt;Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
+Windows users. Take a look at the video:
+&lt;!-- more --&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+&lt;video id=&quot;nodeonazure&quot; src=&quot;http://ak.channel9.msdn.com/ch9/ef4c/0eb8aee4-97f7-430e-9877-9fb30164ef4c/NodejsWindowsAzureIntro_med_ch9.mp4&quot; controls&gt;&lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you&amp;#39;re unfamiliar, Microsoft started contributing resources to a native NodeJS port a while ago. The 
+workflow wasn&amp;#39;t very smooth though. Installing &lt;a href=&quot;http://github.com/joyent/node/wiki/modules&quot;&gt;Node modules&lt;/a&gt; 
+meant manually cloning them from Github. It just felt dirty in comparison to the Linux alternatives. It 
+appeared as though Microsoft was (and is still) targeting IIS integration, i.e. more as a plugin to IIS 
+than a replacement.&lt;/p&gt;
+&lt;p&gt;Now I haven&amp;#39;t used Node with Azure yet, but a few key points really stood out. The biggest was the fact 
+that &lt;a href=&quot;http://npmjs.org&quot;&gt;npm&lt;/a&gt; appears to work as it does in Linux. That is a big win for my workflow. &lt;/p&gt;
+&lt;p&gt;I also really liked the fact there is a &lt;a href=&quot;https://www.windowsazure.com/en-us/develop/nodejs/&quot;&gt;NodeJS Azure Emulator&lt;/a&gt;
+for Windows. I&amp;#39;ve been training a lot of people in the ways of Node lately, all of whom are Windows users. 
+Walking people through a virtual server installation was consuming a lot of time. Now, it appears as though
+a single link can get these folks up and running quickly.&lt;/p&gt;
+&lt;p&gt;My first question was whether or not I could use the emulator to develop my applications locally, but still
+deploy to my existing Linux servers. I&amp;#39;m sure Microsoft wouldn&amp;#39;t be terribly thrilled with this, but they&amp;#39;ve
+at least taken away my reason for completely switching to a Mac.&lt;/p&gt;
+&lt;p&gt;Since I&amp;#39;ve been wrapped up in the wonderful world of Node, Linux, and JavaScript, I really haven&amp;#39;t had much 
+time to consider Azure as a platform. I&amp;#39;ve been looking at Rackspace, Amazon EC2 (which I use today), and
+several other VPS providers though. This video made me look, and the pricing for Azure is actually pretty 
+comparable (in some cases cheaper) than what I&amp;#39;ve seen with these other services.&lt;/p&gt;
+&lt;p&gt;Of course, I have some testing to do. We&amp;#39;ll see how well this holds up with the ever-changing world of NodeJS
+and the multitude of packages that sprout up, but I am currently encouraged by what I&amp;#39;ve seen.&lt;/p&gt;
+&lt;h2&gt;UPDATE:&lt;/h2&gt;
+&lt;p&gt;There&amp;#39;s a nice little tutorial on using NodeJS on Windows 7 over at &lt;a href=&quot;http://dailyjs.com/2012/05/03/windows-and-node-1/&quot;&gt;dailyjs.com&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </entry>
+  
+    <entry>
+      <title>Using Github with Adobe and Aptana</title>
+      <link href="http://artofidea.com/cookbook\development\articles/using-github-with-adobe-and-aptana"/>
+      <updated>2011-10-12T22:08:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/using-github-with-adobe-and-aptana</id>
+      <content type="html">&lt;p&gt;Git has become a popular source code management system, and &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt; has contributed 
+to its continually gaining popularity.&lt;/p&gt;
+&lt;p&gt;Though there is a learning curve, using basic features of Git is pretty intuitive, especially with 
+several of the freely available tools available today. However; getting your environment configured to 
+work with Github can be a test of patience.&lt;/p&gt;
+&lt;p&gt;This guide is relevant to any Eclipse-based IDE, but for demonstration purposes, I&amp;#39;ll be showing how to
+connect Adobe ColdFusion Builder 2 to Github. This guide should also work for Adobe Flash Builder, 
+&lt;a href=&quot;http://www.cfeclipse.org&quot;&gt;CFEclipse&lt;/a&gt;, or any other Eclipse-based IDE.&lt;/p&gt;
+&lt;p&gt;&lt;!-- more --&gt;&lt;/p&gt;
+&lt;div id=&quot;tldr&quot;&gt;
+  &lt;li&gt;How to use Github with Eclipse&lt;/li&gt;
+  &lt;li&gt;Beginning git&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There are many ways to accomplish this task, but I&amp;#39;ve chosen to incorporate &lt;a href=&quot;http://www.aptana.com&quot;&gt;Aptana&lt;/a&gt;
+into my Adobe development environments. Aptana Studio is known as a Rails-oriented plug in for Eclipse, 
+but I started using it for it&amp;#39;s strong JavaScript support. It happens to have one of the more straightforward 
+Git connectors.&lt;/p&gt;
+&lt;h2&gt;Install Aptana for ColdFusion Builder&lt;/h2&gt;
+&lt;p&gt;For this guide, it does not matter whether you&amp;#39;ve installed ColdFusion Builder as a standalone product 
+or as an Eclipse plug in. Both versions run on Eclipse, meaning both have the ability to install Eclipse 
+plug ins.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;NOTE:&lt;/em&gt;
+&lt;em&gt;Your installation must be in a location with local administrative privileges, or at least healthy write privileges.&lt;/em&gt;
+&lt;em&gt;In my first attempt, I tried installing ColdFusion Builder on a Windows 7 system controlled by Active Directory.&lt;/em&gt;
+&lt;em&gt;While I was able to install everything with elevated privileges, I could not run it with elevated privileges. As a&lt;/em&gt; 
+&lt;em&gt;result, everything appeared to work, until trying to sync with Github. At this point, it simply failed to sync with&lt;/em&gt; 
+&lt;em&gt;permission issues. If anyone has insight on how to fix that with an unprivileged account, I&amp;#39;d love to hear about it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The simplest way to install Aptana Studio is through the Eclipse update feature. In ColdFusion/Flash Builder, this is found under:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Help → Install New Software&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This brings up the installation screen. You&amp;#39;ll need to add the Aptana Studio update site to the list by clicking on 
+the Add button. Provide a name and the location of the update site as shown below:&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;http&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;Name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;Aptana&lt;/span&gt;
+&lt;span class=&quot;attribute&quot;&gt;Location&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;http://download.aptana.com/studio3/plugin/install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.static.flickr.com/6107/6236940312_d8fc3e39b4.jpg&quot; alt=&quot;Add Repository&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If prompted, restart ColdFusion Builder.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;With some installations, I&amp;#39;ve had some issues using the&lt;/em&gt; &lt;code&gt;Apply Changes Now&lt;/code&gt; &lt;em&gt;option.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Aptana may prompt you to install msysgit, which will work, but I recommend using the
+&lt;a href=&quot;http://help.github.com/mac-set-up-git&quot;&gt;Setup Git page&lt;/a&gt; for installing Git on your computer anyway. 
+There may be times, especially while learning, where you may wish to use Git from the command line. 
+It is also helpful in creating the SSH keys you&amp;#39;ll need to connect to Github. Regardless of your 
+choice, you should be able to create local Git repositories at this point.&lt;/p&gt;
+&lt;h3&gt;Quick Aside&lt;/h3&gt;
+&lt;p&gt;For those new to Git, it is a source code management system. It works differently from CVS, 
+Subversion, or SourceSafe. One important note is that you cannot directly connect to remote/hosted
+repositories like Github/BitBucket. All communication with these remote repositories is handled by
+a local repository stored on your computer. Aptana Studio and other Git tools help by auto-creating
+local repositories as well as communicating with remote repositories.&lt;/p&gt;
+&lt;h2&gt;Connecting your project to Git&lt;/h2&gt;
+&lt;p&gt;Right-click on the project you want to associate with Git and select &lt;code&gt;Team → Share Project&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.static.flickr.com/6038/6236417285_17cbdc284b_b.jpg&quot; alt=&quot;Share Project&quot;&gt;&lt;/p&gt;
+&lt;p&gt;You&amp;#39;ll be prompted for a repository type, which should be &lt;em&gt;Aptana Git&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.static.flickr.com/6101/6236940356_9cab34fcac.jpg&quot; alt=&quot;Aptana Git&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Next, the wizard will help create a local Git repository.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.static.flickr.com/6215/6236417315_5001425be4_b.jpg&quot; alt=&quot;Local Git Repo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Select the Project and click the &lt;em&gt;Create&lt;/em&gt; button. This will create your local Git 
+repository. Then click finish. At this point, you&amp;#39;ve created your first Git repository! Now 
+it&amp;#39;s time to clean things up so our repository stays tidy.&lt;/p&gt;
+&lt;h2&gt;Ignore Files&lt;/h2&gt;
+&lt;p&gt;Git uses a file called &lt;code&gt;.gitignore&lt;/code&gt; to prevent certain files/directories from being included 
+in your repository. It&amp;#39;s typically good form to not include your &lt;code&gt;.gitignore&lt;/code&gt; file in your 
+repository, so step one is to make it ignore itself. Ignoring files and directories is pretty 
+straightforward. Simply right click the file name and &lt;code&gt;Add to .gitignore&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.static.flickr.com/6036/6236417341_811c692821_b.jpg&quot; alt=&quot;Add to gitignore&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It may be desirable to add wild card entries to your &lt;code&gt;.gitignore&lt;/code&gt; file as well. For example, 
+Eclipse users will be familiar with the .project file, and you may also see a &lt;code&gt;.git&lt;/code&gt; directory 
+in your project. I find it useful to ignore every file/directory in my project, as well as files 
+that aren&amp;#39;t relevant to my project (like &lt;code&gt;.thumb&lt;/code&gt;). Gitignore, which is just a text file, can be 
+edited to support wild cards. You can add the following:&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;haskell&quot;&gt;.*
+&lt;span class=&quot;title&quot;&gt;_&lt;/span&gt;*
+&lt;span class=&quot;title&quot;&gt;settings&lt;/span&gt;.xml&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This would ignore all files/directories that start with a dot or underscore, such as &lt;code&gt;.project&lt;/code&gt;, 
+&lt;code&gt;.git&lt;/code&gt;, or &lt;code&gt;_NOTES&lt;/code&gt;. It will also ignore the XML metadata settings file most Adobe products use 
+to manage a project. As a result, these files will not end up in your remote project repository.&lt;/p&gt;
+&lt;h3&gt;Using Github&lt;/h3&gt;
+&lt;p&gt;Github is just one of several Git services, but it is extremely popular. It&amp;#39;s free for open source
+projects and inexpensive for private projects. &lt;a href=&quot;http://www.bitbucket.org&quot;&gt;BitBucket&lt;/a&gt; is an 
+alternative that has free open and private projects in addition to a commercial service. Setup between 
+the two is similar, but we&amp;#39;ll stick to Github for this tutorial.&lt;/p&gt;
+&lt;p&gt;First, you must have a personal Github account, so sign up for a free account. Next, you&amp;#39;ll need an 
+SSH key to connect with your repositories. You&amp;#39;ll need an SSH key on every computer you work on. 
+Github allows you to add multiple keys, so I have repeated the same process on my laptop, desktops, 
+and workstations.&lt;/p&gt;
+&lt;p&gt;The simplest and most common way to create an SSH key and add it to your Github account is described 
+in detail at &lt;a href=&quot;http://help.github.com/win-set-up-git/&quot;&gt;&lt;a href=&quot;http://help.github.com/win-set-up-git&quot;&gt;http://help.github.com/win-set-up-git&lt;/a&gt;&lt;/a&gt;. 
+&lt;em&gt;This is the recommended method.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Add a Repository&lt;/h2&gt;
+&lt;p&gt;If you haven&amp;#39;t already, create a Github repository. This is done from the Dashboard of your Github 
+account:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.static.flickr.com/6234/6236417409_ef8d3e5e54_b.jpg&quot; alt=&quot;Git Repo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I recommend starting with a free open source repository until you&amp;#39;re comfortable with how everything works.&lt;/p&gt;
+&lt;h2&gt;Connecting Your Project to Github with Aptana&lt;/h2&gt;
+&lt;p&gt;At this point, you should have a Github repository created on Github.com and a local repository
+associated with your project. It&amp;#39;s time to tie the two of them together.&lt;/p&gt;
+&lt;p&gt;The Aptana plug in provides a menu option for adding a remote repository, but I have had limited 
+success with this. Therefore, I&amp;#39;m going to show how to manually configure a remote connection to 
+Github.&lt;/p&gt;
+&lt;h3&gt;Manual Remote Repository Configuration&lt;/h3&gt;
+&lt;p&gt;In your project directory, you should see a &lt;code&gt;.git&lt;/code&gt; directory. If you&amp;#39;re working on a Mac, this 
+directory may be hidden. This directory contains a file called config, which needs to be modified. 
+When you open the file, you will see a core attribute only. We need to add a remote connection and 
+identify the master branch, as shown below. For copy/paste purposes, I&amp;#39;ve provided a demo config below:&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;ini&quot;&gt;&lt;span class=&quot;title&quot;&gt;[core]&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;repositoryformatversion = &lt;span class=&quot;value&quot;&gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;filemode = &lt;span class=&quot;value&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;bare = &lt;span class=&quot;value&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;logallrefupdates = &lt;span class=&quot;value&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;symlinks = &lt;span class=&quot;value&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;ignorecase = &lt;span class=&quot;value&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;hideDotFiles = &lt;span class=&quot;value&quot;&gt;dotGitOnly&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;title&quot;&gt;[remote &quot;Test&quot;]&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;url = &lt;span class=&quot;value&quot;&gt;git@github.com:mygithubname/myrepository.git&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;fetch = &lt;span class=&quot;value&quot;&gt;+refs/heads/*:refs/remotes/test/*&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;title&quot;&gt;[branch &quot;master&quot;]&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;remote = &lt;span class=&quot;value&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;merge = &lt;span class=&quot;value&quot;&gt;refs/heads/master&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.static.flickr.com/6047/6236940446_012955e94f_b.jpg&quot; alt=&quot;Git Config&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Save this file and you&amp;#39;re done.&lt;/p&gt;
+&lt;h2&gt;Using Github&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Push &amp;amp; Pull:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Assuming you followed this guide and configured everything correctly, you should be able to push and 
+pull from your remote repository. However; you first need to commit changes to your local repository. 
+Remember, all interaction with a remote repository is done through your local repository. If there are 
+no changes committed to your local repository, then no changes will be pushed to your remote repository. 
+The advantage of doing this is you can make as many changes as you like before sharing with other 
+developers. That means you can screw up and fix as much as you like before ever publishing to the world.
+Once you&amp;#39;ve added some files to your project and are ready to push them to Github, right-click on the 
+project and go to &lt;code&gt;Team → Commit&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You will need to stage any/all changes you&amp;#39;ve made and add a message, as shown below:&lt;/p&gt;
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://farm7.static.flickr.com/6179/6236940458_35433d5ca2_b.jpg&quot;&gt;&lt;img align=&quot;middle&quot; src=&quot;http://farm7.static.flickr.com/6179/6236940458_35433d5ca2_b.jpg&quot; alt=&quot;Commit&quot; width=&quot;500&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Click on the Commit button to save your changes in your &lt;em&gt;local&lt;/em&gt; Git repository.&lt;/p&gt;
+&lt;p&gt;Now you can push your changes to Github. To do this, right click on the project and go to:
+&lt;code&gt;Team → Push To Remote&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Select the remote repository that was configured in prior steps.&lt;br/&gt;
+&lt;img src=&quot;http://farm7.static.flickr.com/6033/6236940472_a592a09256_b.jpg&quot; alt=&quot;Push to Remote&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Once you push to the remote repository, you should see progress in the output console (if you have it open). Please note that the first time you push to a remote repository, it may be quite slow. You will also be prompted to accept the RSA fingerprint from Github (which you must do). This will add Github to your Known Hosts file if it isn&amp;#39;t already there.
+Finally, go check out your Github page. You should see your code there.&lt;/p&gt;
+&lt;h2&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;Now that you have a project working with Github, you should start to use the features and get familiar 
+with it. Browse the documentation the Github website. Github has several interesting hooks and features 
+that make it useful. A common feature is the Readme.md file. Github uses &amp;quot;Github Flavored Markdown&amp;quot; to 
+create visually appealing documentation. If a Readme.md file is found in your project root, it will 
+automatically be displayed on the page. This is how many developers provide introductory notes about 
+their project for the community. Of course this can be expanded through use of the wiki or pages.
+I anticipate covering Github issues and how to integrate Github issue management directly into 
+ColdFusion/Flash/Eclipse Builder in an upcoming post.&lt;/p&gt;
+&lt;p&gt;Please let me know if you find this useful!&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;a href=&quot;http://github.com/coreybutler&quot;&gt;find me on Github&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </entry>
+  
+    <entry>
+      <title>Mongoose Schema Structure</title>
+      <link href="http://artofidea.com/cookbook\development\articles/mongoose-schema-structure"/>
+      <updated>2011-08-26T13:30:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/mongoose-schema-structure</id>
+      <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.nodejs.org&quot;&gt;NodeJS&lt;/a&gt; has become a prominent part of my development stack over the last few months, 
+as has &lt;a href=&quot;http://www.mongodb.org&quot;&gt;MongoDB&lt;/a&gt;. The folks from Learnboost have created several great NodeJS packages, 
+one of which is &lt;a href=&quot;http://www.mongoosejs.com&quot;&gt;Mongoose&lt;/a&gt;. Mongoose is a MongoDB wrapper that helps developers 
+define schemas or data objects stored in MongoDB. Though the library is powerful and pretty feature rich, there 
+isn&amp;#39;t much written on best practice use of it. I&amp;#39;ve decided to share my approach in hopes of sparking discussion 
+around this topic.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;For those who aren&amp;#39;t familiar with Mongoose, it is a NodeJS wrapper around MongoDB. Being a NoSQL document store, 
+MongoDB has no defined data structure. For those coming the world of SQL, this can be a bit alarming. Mongoose 
+adds a data integrity layer to applications through the use of Schemas. A schema can be but isn&amp;#39;t necessarily a 
+&amp;quot;database&amp;quot; or &amp;quot;table&amp;quot; within MongoDB. However; this is really outside the scope of this article. Head over to the 
+MongoDB site and lookup collections or the Mongoose website for more information.&lt;/p&gt;
+&lt;p&gt;If you&amp;#39;re familiar with Mongoose, you know it&amp;#39;s possible to define many Schemas in a single JavaScript file. For 
+small applications, this isn&amp;#39;t a big deal. However; handling a lot of schemas can get confusing with no organizational 
+pattern. Personally, I liked the idea of keeping my schemas organized in a one-schema-per-file manner where the file 
+is named in representation of the data it represents. This helps isolate schema logic and keep it in the context of a 
+single file. Furthermore, you can simply look in a single directory to see the schemas.&lt;/p&gt;
+&lt;p&gt;To accomplish this, I created &lt;a href=&quot;https://github.com/coreybutler/goose&quot;&gt;Goose&lt;/a&gt;.
+Goose handles a lot of common stuff. For example, it supports connecting to single MongoDB instances or replica sets, 
+it auto-includes and registers schema models, and I&amp;#39;ve added autoconnect, debugging, custom and generic errors, and 
+connection timeouts... all wrapped up with some sugar syntax.&lt;/p&gt;
+&lt;p&gt;If you use it, please let me know. If you modify it, let me know. If you add to it, please share with everyone!&lt;/p&gt;
+</content>
+    </entry>
+  
+    <entry>
+      <title>Using ColdFusion with Amazon Payments</title>
+      <link href="http://artofidea.com/cookbook\development\articles/using-coldfusion-with-amazon-payments"/>
+      <updated>2011-01-26T15:10:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/using-coldfusion-with-amazon-payments</id>
+      <content type="html">&lt;p&gt;With &lt;a href=&quot;https://payments.amazon.com&quot;&gt;Amazon Payments&lt;/a&gt;, web developers can simplify the checkout and payment
+process for millions of people who are already registered Amazon customers.
+Amazon Payments offers a hosted e-commerce solution and a payments-only service
+called Amazon Simple Pay. But how do you integrate Amazon Payments into your own e-commerce site?&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;div id=&quot;tldr&quot;&gt;
+  &lt;ol&gt;
+    &lt;li&gt;CFAmazon makes Amazon Payments simple for ColdFusion developers.&lt;/li&gt;
+    &lt;li&gt;CFAmazon supports Amazon signatures!&lt;/li&gt;
+    &lt;li&gt;XML is used for shopping carts.&lt;/li&gt;
+    &lt;li&gt;Callback API works &amp;quot;asynchronously&amp;quot;, extends capabilities.&lt;/li&gt;
+    &lt;li&gt;Instant Payment Notification (IPN) - A Webhook&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Checkout by Amazon&lt;/em&gt; offers an API for developers who want to integrate the service into their own website.
+The API offers significant flexibility for developers, but there is so much it can sometimes be difficult
+to know where to start. Luckily, there is a ColdFusion wrapper and examples available at 
+&lt;a href=&quot;https://github.com/ecorgroup/amazon&quot;&gt;&lt;a href=&quot;https://github.com/ecorgroup/amazon&quot;&gt;https://github.com/ecorgroup/amazon&lt;/a&gt;&lt;/a&gt;. After reading this, you should
+have an idea of how to get Checkout by Amazon working on your ColdFusion website.&lt;/p&gt;
+&lt;p&gt;There are three high level areas every developer should be aware of before getting started.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;XML-based Carts &amp;amp; Signatures&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; All information sent between your website and Amazon is formatted as XML. Security is important, especially
+ when dealing with online payments. Therefore, all XML must be signed with a unique signature. Creating the 
+ signature is a part of the process where many questions arise, so they&amp;#39;re addressed in detail below. 
+ XML-based carts are covered in the basic integration guide provided on Seller Central (your Amazon merchant account).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Callback API&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; The Callback API offers developers advanced customization capabilities for the checkout process. This API
+ can be used to programmatically override default taxes, manage promotions, and create special shipping
+ options. It is called the Callback API because it uses  callback URLs defined in Seller Central (the
+ merchant portal) to communicate with your website. Details of the callback API are covered in the
+ Callback API PDF guide.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Instant Payment Notification&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; IPN can be used to perform custom actions for an order. This feature will post information to a predefined
+ URL when an order is placed or cancelled. This is a good way to log orders in your own database, update 
+ your CRM application, or create a follow-up request. IPN is covered in the Integration Guide. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Working with Amazon Payments requires &lt;a href=&quot;http://http://www.coreybutler.com/post/2829632232/creating-an-amazon-payments-seller-account&quot;&gt;Creating an Amazon Seller Account&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;XML-based Shopping Cart&lt;/h2&gt;
+&lt;p&gt;Creating an order is a matter of passing a shopping cart to Amazon via XML. The XML must be signed with 
+a unique key in order for Amazon to consider it valid. The first step is, of course, to create the XML 
+shopping cart. The XML file must validate to the XSD provided by Amazon. The code should look something 
+like the following:&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;pi&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Order&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;xmlns&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;http://payments.amazon.com/checkout/2009-05-15/&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Cart&lt;/span&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Items&lt;/span&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Item&lt;/span&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;SKU&lt;/span&gt;&amp;gt;&lt;/span&gt;ABC123&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;SKU&lt;/span&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;MerchantId&lt;/span&gt;&amp;gt;&lt;/span&gt;AEIOU1234AEIOU&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;MerchantId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Title&lt;/span&gt;&amp;gt;&lt;/span&gt;Red Fish&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Title&lt;/span&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Price&lt;/span&gt;&amp;gt;&lt;/span&gt;
+                    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Amount&lt;/span&gt;&amp;gt;&lt;/span&gt;19.99&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Amount&lt;/span&gt;&amp;gt;&lt;/span&gt;
+                    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;CurrencyCode&lt;/span&gt;&amp;gt;&lt;/span&gt;USD&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;CurrencyCode&lt;/span&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Price&lt;/span&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Quantity&lt;/span&gt;&amp;gt;&lt;/span&gt;1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Quantity&lt;/span&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Item&lt;/span&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Items&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Cart&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Order&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The CFAmazon library provides cart and item CFC objects that can be used to intuitively prepare an order.
+Creating the XML is a matter of calling the &lt;code&gt;cart.getXml()&lt;/code&gt; method.&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;&amp;lt;cfscript&amp;gt;
+    cart = createObject(&lt;span class=&quot;string&quot;&gt;&quot;component&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;com.amazon.cba.cart&quot;&lt;/span&gt;);
+    cart.init(&lt;span class=&quot;string&quot;&gt;'ACCESSKEY'&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;'SECRET'&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;'MERCHANTID'&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;);
+
+    &lt;span class=&quot;comment&quot;&gt;//Add a regular item to the cart.&lt;/span&gt;
+    cart.addItem(&lt;span class=&quot;string&quot;&gt;'Red Fish'&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;19.99&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);
+
+    &lt;span class=&quot;comment&quot;&gt;//Add a customized item to the cart.&lt;/span&gt;
+    item = createObject(&lt;span class=&quot;string&quot;&gt;&quot;component&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;com.amazon.cba.item&quot;&lt;/span&gt;);
+    item.init(&lt;span class=&quot;string&quot;&gt;'Blue Fish'&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;29.99&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);
+    item.setWeight(&lt;span class=&quot;number&quot;&gt;1.75&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;lb&quot;&lt;/span&gt;);
+    cart.addCustomItem(item);
+&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cfscript&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfdump&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;var&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;#cart.getXml()#&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;label&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;Order XML&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The code above (found in CFAmazon &lt;code&gt;xml-signed.cfm&lt;/code&gt; example) creates an XML cart with two different items, 
+one of which has a custom weight. To see the XML, dump the cart object.
+Now that an order is prepared, it must be signed and submitted to Amazon Payments for processing. 
+Amazon provides some standard JavaScript widgets that can be used to generate the Checkout by Amazon 
+button shown below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../img/blog/CFAmazon/order.png&quot; alt=&quot;ColdFusion Amazon Payments Order&quot;&gt;&lt;/p&gt;
+&lt;p&gt;To create the button, the JavaScript file must be included in the head of page:&amp;gt;&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;language&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;javascript&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;https://payments-sandbox.amazon.com/cba/js/PaymentWidgets.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Put a &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; with a unique ID into the page wherever the button should show up. Before the &lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt; tag, 
+JavaScript must be included to actually create the button.&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;parser3&quot;&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;signedBtn&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfoutput&lt;/span&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;
+            &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; CBA.Widgets.StandardCheckoutWidget({
+                merchantId:    &lt;span class=&quot;string&quot;&gt;'#cart.merchantID#'&lt;/span&gt;,
+                orderInput:    {
+                    format:&lt;span class=&quot;string&quot;&gt;&quot;XML&quot;&lt;/span&gt;,
+                    value: &lt;span class=&quot;string&quot;&gt;&quot;type:merchant-signed-order/aws-accesskey/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&amp;gt;order:#toBase64(cart.getXml())#&amp;gt;signature:#cart.getXmlSignature()#&amp;gt;aws-access-key-id:#cart.accessKeyID#&quot;
+                },
+                buttonSettings:{
+                    size:        'large',
+                    color:        'orange',
+                    background:    'green'
+                }
+            }).render(&quot;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;signedBtn&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;&quot;);
+        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cfoutput&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;#39;s break down the code. First, the cart object contains all of the parameters required for submitting 
+an order. The merchantID and accessKeyID , highlighted in grey and yellow, are defined when the cart is 
+initialized (these values are found in your Seller Central account). The order is the 
+Base64 encoding of your XML cart. A signature, highlighted in green, can be generated using the &lt;code&gt;getXmlSignature()&lt;/code&gt; 
+method of the cart object.&lt;/p&gt;
+&lt;p&gt;The code above is enough to generate a checkout button for an order. When the user clicks on the button, 
+a window will pop up asking them to login to Amazon to complete the order.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../img/blog/CFAmazon/orderprocess.png&quot; alt=&quot;Process Amazon Order&quot; width=&quot;435&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Digging Deeper: How is the signature generated?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Generating the signature is typically the most problematic part of the process. CFAmazon abstracts the 
+complexity of creating a signature by hand, but here is a breakdown for those who are interested. The 
+signature is generated using the XML cart (string) and a unique key (your Access Secret assigned in 
+Seller Central) encrypted using &lt;code&gt;HMAC-SHA1&lt;/code&gt;. The &lt;code&gt;getXmlSignature()&lt;/code&gt; method is a shortcut method that 
+converts the XML cart to a string and passes the data and your Access Secret to a common method found 
+in the &lt;code&gt;factory.cfc&lt;/code&gt; file shown below.&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cffunction&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;sign&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;access&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;public&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;output&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;returntype&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;String&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfargument&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;data&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;String&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;required&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;true&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfargument&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;key&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;String&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;required&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;true&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfscript&lt;/span&gt;&amp;gt;&lt;/span&gt;
+        var sformat = &quot;UTF-8&quot;
+        var ekey    = createObject(&quot;java&quot;,&quot;javax.crypto.spec.SecretKeySpec&quot;);
+        var secret  = ekey.Init(arguments.key.getBytes(sformat),&quot;HmacSHA1&quot;);
+        var mac     = createObject(&quot;java&quot;,&quot;javax.crypto.Mac&quot;);
+
+        //Initialize the MAC
+        mac = mac.getInstance(ekey.getAlgorithm());
+        mac.init(secret);
+
+        return toBase64(mac.doFinal(arguments.data.getBytes(sformat)));
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cfscript&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cffunction&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The function above creates a java object to do the encryption and returns a Base64 encoded string that 
+can be used as the signature.&lt;/p&gt;
+&lt;h2&gt;The Callback API&lt;/h2&gt;
+&lt;p&gt;If you&amp;#39;re running a promotion, have special shipping options, or need to specify taxes for a specific 
+order on the fly, then the callback API is necessary. Use of the callback API requires additional XML 
+code. Once again, CFAmazon attempts to abstract the complexity of creating the XML. Observe the code 
+below (&lt;code&gt;xml-signed-callbacks.cfm&lt;/code&gt;):&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;applescript&quot;&gt;&amp;lt;cfscript&amp;gt;
+    cart = createObject(&lt;span class=&quot;string&quot;&gt;&quot;component&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;com.amazon.cba.cart&quot;&lt;/span&gt;);
+    cart.init('ACCESSKEY','SECRET','MERCHANTID',&lt;span class=&quot;constant&quot;&gt;true&lt;/span&gt;);
+
+    //Initialize callbacks
+    cart.setCallbackUrl('CALLBACKURL');
+    cart.setCalculatePromotions(&lt;span class=&quot;constant&quot;&gt;true&lt;/span&gt;);
+
+    //Add a regular &lt;span class=&quot;property&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;the&lt;/span&gt; cart.;
+    cart.addItem('Red Fish',&lt;span class=&quot;number&quot;&gt;19.99&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,'&lt;span class=&quot;number&quot;&gt;12345&lt;/span&gt;SKU');
+
+    //Add a customized &lt;span class=&quot;property&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;the&lt;/span&gt; cart.
+    &lt;span class=&quot;property&quot;&gt;item&lt;/span&gt; = createObject(&lt;span class=&quot;string&quot;&gt;&quot;component&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;com.amazon.cba.item&quot;&lt;/span&gt;);
+    &lt;span class=&quot;property&quot;&gt;item&lt;/span&gt;.init('Blue Fish',&lt;span class=&quot;number&quot;&gt;29.99&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);
+    &lt;span class=&quot;property&quot;&gt;item&lt;/span&gt;.setWeight(&lt;span class=&quot;number&quot;&gt;1.75&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;lb&quot;&lt;/span&gt;);
+    &lt;span class=&quot;property&quot;&gt;item&lt;/span&gt;.setSKU('&lt;span class=&quot;number&quot;&gt;6789&lt;/span&gt;SKU');
+    cart.addCustomItem(&lt;span class=&quot;property&quot;&gt;item&lt;/span&gt;)&amp;gt;;
+
+    //Add a regular &lt;span class=&quot;property&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;the&lt;/span&gt; cart.&amp;gt;
+    cart.addItem('Fish Tank',&lt;span class=&quot;number&quot;&gt;49.99&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,'SKU123')&amp;gt;;
+&amp;lt;/cfscript&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This example sets the callback URL and indicates a custom promotion needs to be calculated and applied 
+to the order. Notice that all of the items are assigned a unique SKU number. SKU numbers act as a 
+unique identifier and are required to use the callback API. When the user clicks the Checkout with 
+Amazon button, Amazon creates a form POST to the callback URL. Your website must be able to handle this
+request and respond in a timely fashion (under 5 seconds) in order to be considered valid.&lt;/p&gt;
+&lt;p&gt;CFAmazon includes a file called &lt;code&gt;callback.cfm&lt;/code&gt; which contains example code for your callback URL. 
+An object called callback.cfc provides several helper methods to simplify the process of creating a 
+response. Since Amazon uses a POST request to callback URL, all of the data is available in the
+&lt;code&gt;&amp;lt;u&amp;gt;FORM&amp;lt;/u&amp;gt;&lt;/code&gt; scope, but it is URL encoded.&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--- Create an Amazon Factory to help with processing the callback ---&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfset&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;callback&lt;/span&gt; = &lt;span class=&quot;attribute&quot;&gt;createObject&lt;/span&gt;(&quot;&lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;&quot;,&quot;&lt;span class=&quot;attribute&quot;&gt;com.amazon.cba.callback&lt;/span&gt;&quot;)/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfset&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;callback.init&lt;/span&gt;('&lt;span class=&quot;attribute&quot;&gt;ACCESSKEY&lt;/span&gt;','&lt;span class=&quot;attribute&quot;&gt;SECRET&lt;/span&gt;','&lt;span class=&quot;attribute&quot;&gt;MERCHANTID&lt;/span&gt;',&lt;span class=&quot;attribute&quot;&gt;true&lt;/span&gt;)/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--- Callback API Response ---&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cftry&lt;/span&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--- 1. Verify the request is from Amazon. ---&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfset&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;valid&lt;/span&gt; = &lt;span class=&quot;attribute&quot;&gt;callback.verifyRequestIsFromAmazon&lt;/span&gt;(&lt;span class=&quot;attribute&quot;&gt;urldecode&lt;/span&gt;(&amp;lt;&lt;span class=&quot;attribute&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;form.UUID&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;),urldecode(*form.Timestamp*),&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;form.Signature&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;)/&amp;gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfif&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;valid&lt;/span&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--- Handle fake requests ---&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfexit&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cfif&lt;/span&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--- 2. Parse the XML Request Data ---&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfset&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;callback.parseRequest&lt;/span&gt;(&lt;span class=&quot;attribute&quot;&gt;urldecode&lt;/span&gt;(&amp;lt;&lt;span class=&quot;attribute&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;form[&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;'order-calculations-request'&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;]&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;u&lt;/span&gt;&amp;gt;&lt;/span&gt;))/&amp;gt;
+
+    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--- 3. Calculate Promotional Discounts ---&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfscript&lt;/span&gt;&amp;gt;&lt;/span&gt;
+        //Get all Item SKU numbers from the order&amp;gt;
+        skus = callback.getAllItemSkuNumbers();
+
+        //Create &amp;amp; apply a basic promotion/discount
+        callback.addPromotion(&quot;halfoffbluefish&quot;,&quot;Half Off Blue Fish!&quot;,.5,false);
+        callback.applyPromotion(skus[2],&quot;halfoffbluefish&quot;); //applied to the second item (Blue Fish)
+
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cfscript&lt;/span&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfoutput&lt;/span&gt;&amp;gt;&lt;/span&gt;#callback.generateResponse()#&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cfoutput&lt;/span&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfcatch&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;any&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--- Respond to Amazon with an error ---&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;cfoutput&lt;/span&gt;&amp;gt;&lt;/span&gt;#toString(callback.getXmlResponse(&quot;INTERNAL_SERVER_ERROR&quot;,cfcatch.message&amp;amp;&quot; &quot;&amp;amp;cfcatch.detail))#&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cfoutput&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cfcatch&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;cftry&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Since your callback URL is open to the whole world, it is important to verify that the callback request is actually from Amazon.
+ The &lt;code&gt;verifyRequestIsFromAmazon&lt;/code&gt; method (found in &lt;code&gt;factory.cfc&lt;/code&gt;) is used to accomplish this. This function
+ generates a valid signature and compares it to the signature submitted to your callback page. 
+ Additionally, it checks the timestamp against your local server time to make sure the request was 
+ submitted within the last 15 minutes. If either of these conditions fails, the request is not considered
+ valid and processing cannot continue.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Once the request is validated, the callback can processed. Amazon posts an attribute called order-calculations-request 
+ containing the XML cart with additional nodes (such as customer address). CFAmazon parses this content into an attribute 
+ (struct) called &lt;code&gt;REQUEST&lt;/code&gt;, simply to make the data more manageable and accessible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Next, the custom promotion must be defined and applied to the items you want to discount. 
+ The addPromotion method defines a unique ID for the promotion, a description, and a fixed or 
+ percentage-based discount value. The addPromotion method associates the promotion with the SKU number 
+ of the discounted item. Both of these methods set flags that help the callback object generate a proper 
+ XML response with only the requested callback information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Finally, the XML response is generated and output to the page. Amazon uses this to complete the order 
+process with the specified customizations applied in real time.&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s important to note that the callback API is very flexible and very powerful. CFAmazon only implements 
+the most common functionality. If your website requires more customization, read the Callback API Guide (PDF)
+provided by Amazon. Once you have gained an understanding of how callbacks are processed, the &lt;code&gt;callback.cfc&lt;/code&gt;
+file should be updated with your modifications. If you implement any additional functionality, please consider 
+contributing it to the CFAmazon project!&lt;/p&gt;
+&lt;h2&gt;Instant Payment Notification&lt;/h2&gt;
+&lt;p&gt;IPN provides developers the ability to direct the user&amp;#39;s browser to different locations after they 
+complete or cancel the order. Amazon automatically sends a confirmation email to the customer upon 
+completion of a transaction, but IPN can come in handy if you want to setup a &amp;quot;Thank You&amp;quot; landing page, 
+log the order, or perform any other post-order processing. Amazon will direct the user&amp;#39;s browser to the 
+appropriate URL defined in your Seller Central &amp;quot;Checkout Pipeline&amp;quot; settings shown below. This is a basic 
+redirect that contains a number of URL parameters. For testing purposes, it&amp;#39;s a good idea to simply dump 
+the URL scope to the screen (i.e. &lt;code&gt;&amp;lt;cfdump var=&amp;quot;#url#&amp;quot;&amp;gt;&lt;/code&gt;) in order to see all of the data available.&lt;/p&gt;
+&lt;p&gt;&lt;img height=&quot;562&quot; width=&quot;650&quot; alt=&quot;Checkout Pipeline&quot; src=&quot;../../../img/blog/checkoutpipeline.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;CFAmazon is really just a starting point for working with Amazon Payments. There are many more features 
+available for developers. Keep an eye on the GitHub repository and RIAForge for updates, and of course submit 
+your own modifications for the benefit of the community!&lt;/p&gt;
+</content>
+    </entry>
+  
+    <entry>
+      <title>Creating an Amazon Payments Seller Account</title>
+      <link href="http://artofidea.com/cookbook\development\articles/creating-an-amazon-payments-seller-account"/>
+      <updated>2011-01-19T20:59:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/creating-an-amazon-payments-seller-account</id>
+      <content type="html">&lt;p&gt;If you&amp;#39;re interested in integrating Amazon Payments into your website, the first step is to setup a 
+seller account at &lt;a href=&quot;http://payments.amazon.com&quot;&gt;Amazon Payments&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../img/blog/signup.png&quot; alt=&quot;Amazon Payments&quot;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;Amazon clearly states right up front that you&amp;#39;ll need to provide your business name, address, and 
+contact information. You also need to provide a personal credit card number and billing address. 
+If you&amp;#39;re like me, that requirement threw up a red flag. As an integrator/developer working on a 
+website for a client, I wasn&amp;#39;t very keen on handing out this information. However; you are the owner 
+of the account, not your client. Amazon Payments supports integrators. In the end, you will not be 
+handing your credit card information to anyone, but it&amp;#39;s not very clear on the signup page. You&amp;#39;ll 
+also be required to provide a phone number where you can be reached during the registration process. 
+This is undoubtedly to keep illegitimate programmers from setting up false accounts and for providing 
+help if necessary through the process. To date, I have not received any spam, phone calls, or 
+anything else annoying from Amazon.&lt;/p&gt;
+&lt;h2&gt;Configure The Development Sandbox&lt;/h2&gt;
+&lt;p&gt;Once your registration is processed, it&amp;#39;s time to configure your account for development. First and 
+foremost, &lt;strong&gt;make sure your account is setup to use sandbox mode&lt;/strong&gt;. You can configure this by selecting 
+the sandbox from the dropdown at the top of the screen (as shown in #1). You should also see the 
+&lt;code&gt;Switch to Production&lt;/code&gt; box shown in #2. Once the account is configured as a sandbox, basic parameters 
+must be configured for your website. Start by reading the materials in integration central shown in #3.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../img/blog/sellercentral.png&quot; alt=&quot;Amazon Payments Seller Central&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Integration Central provides all of the documentation you need to integrate Checkout by Amazon into your 
+website. There are plenty of examples for languages of all types including Java, PHP, .NET/C#, and ColdFusion. 
+If you&amp;#39;re a ColdFusion developer, you already have a starting point. See my article on Using ColdFusion with 
+Amazon Payments.&lt;/p&gt;
+&lt;h2&gt;Obtain Access Keys&lt;/h2&gt;
+&lt;p&gt;There are two very important links on the Integration Central toolbar. The Access Key page contains your 
+access key and secret access key. You will need these in your code to generate unique signatures for API 
+requests.&lt;/p&gt;
+&lt;p&gt;&lt;img height=&quot;451&quot; width=&quot;650&quot; alt=&quot;Amazon Payments Access Keys&quot; src=&quot;../../../img/blog/accesskey.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Error Console&lt;/h2&gt;
+&lt;p&gt;Integration Central also has a tool called the Error Console. This tool is very helpful for identifying 
+problems that occur on Amazon servers. The screenshot below shows an example of what you might see if 
+you were working with the Callback API.&lt;/p&gt;
+&lt;p&gt;&lt;img height=&quot;383&quot; width=&quot;650&quot; alt=&quot;Amazon Payments Integration Error Console&quot; src=&quot;../../../img/blog/errorconsole.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Clicking on a specific error will provide you with additional detail specific to the API you&amp;#39;re working with. For 
+example, the Callback API contains a general error, the response received by Amazon, the callback request Amazon 
+sent to your server, the original callback request sent by Amazon, and the original cart request sent from your 
+website to Amazon. To top this off, the very bottom of the page provides steps to resolve known/common issues. 
+Keep this tool in mind as you develop. It can save a lot of time and headaches!&lt;/p&gt;
+&lt;h2&gt;Settings&lt;/h2&gt;
+&lt;p&gt;&lt;img height=&quot;263&quot; width=&quot;192&quot; alt=&quot;Amazon Payments Integration Settings&quot; src=&quot;../../../img/blog/settings.png&quot; align=&quot;right&quot; /&gt;
+There are a few settings that need to be configured. The list of settings is available under the last main tab of the page.&lt;/p&gt;
+&lt;p&gt;First, your account is assigned a Merchant Token, which is necessary for the XML submitted to Amazon on each API call. 
+This number is found under Account Info at the very bottom of the page.&lt;/p&gt;
+&lt;h3&gt;Shipping Settings, Manage Taxes, &amp;amp; Manage Promotions&lt;/h3&gt;
+&lt;p&gt;The settings in each of these sections are used as defaults when a user submits a new order through your website. However; 
+no changes are required to start integrating Checkout by Amazon into your website. These settings can be overwritten 
+programmatically using the Callback API.&lt;/p&gt;
+&lt;h3&gt;Checkout Pipeline Settings&lt;/h3&gt;
+&lt;p&gt;This is the most important section that requires the most attention. This is where you set general &amp;quot;pipeline&amp;quot; settings, 
+configure Instant Payment Notification, and find your Merchant ID (which is NOT the same as your Merchant Token).&lt;/p&gt;
+&lt;p&gt;&lt;img height=&quot;562&quot; width=&quot;650&quot; alt=&quot;Amazon Payments Checkout Pipeline Settings&quot; src=&quot;../../../img/blog/checkoutpipeline.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The Checkout Pipeline Settings defines &amp;quot;redirect&amp;quot; URL&amp;#39;s. These are the locations where Amazon will direct a user&amp;#39;s 
+browser upon a certain event (such as successful payment). This section is also where shopping cart security can be 
+enabled. This setting determines whether Amazon will accept XML-based shopping carts with or without a signature. 
+This can be disabled for development purposes, but is required for production use.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It is better to enable secure carts right from the beginning of development. For the most part, there is no functional&lt;/em&gt;
+&lt;em&gt;difference between a secure/insecure cart. However; secure carts require proper use of SSL on the server side. For many&lt;/em&gt;
+&lt;em&gt;developers, this is more of a stumbling block than writing code. Your web server must have a recognizable SSL certificate&lt;/em&gt;
+&lt;em&gt;installed in order to communicate with Amazon. If you are a ColdFusion developer, this means the Amazon SSL certificate&lt;/em&gt;
+&lt;em&gt;must be imported into the keystore (covered in the &lt;a href=&quot;./using-coldfusion-with-amazon-payments/&quot;&gt;Using ColdFusion with Amazon Payments&lt;/a&gt;).&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Once you have configured your seller account, it&amp;#39;s time to start developing! If you didn&amp;#39;t look at the documentation in 
+Integration Central, it is a good idea to at least review it. If you are looking to integrate Checkout by Amazon into a 
+ColdFusion website, please check out my article on &lt;a href=&quot;./using-coldfusion-with-amazon-payments/&quot;&gt;Using ColdFusion with Amazon Payments&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </entry>
+  
 </feed>
