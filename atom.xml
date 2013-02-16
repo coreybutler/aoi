@@ -4,13 +4,77 @@
     <subtitle>The blog of Corey Butler.</subtitle>
     <link href="http://artofidea.com/atom.xml" rel="self" />
     <link href="The blog of Corey Butler." />
-    <updated>2013-02-12T23:26:15.469Z</updated>
+    <updated>2013-02-16T20:58:50.403Z</updated>
     <id>http://artofidea.com</id>
     <author>
         <name>Corey Butler</name>
         <email>corey@artofidea.com</email>
     </author>
     
+    <entry>
+      <title>Introducing node-windows</title>
+      <link href="http://artofidea.com/cookbook\development\articles/node-windows"/>
+      <updated>2013-02-16T06:00:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/node-windows</id>
+      <content type="html">&lt;p&gt;&lt;a href=&quot;http://github.com/coreybutler/node-windows&quot;&gt;node-windows&lt;/a&gt; is a node.js module designed to
+simplify coding for developers using Microsoft Windows.&lt;/p&gt;
+&lt;p&gt;This module focuses on elevated user privileges, detecting user permissions, running node
+apps as a Windows service, and a couple of wrappers around OS-level data.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;div id=&quot;tldr&quot;&gt;
+  &lt;li&gt;&lt;b&gt;elevate&lt;/b&gt;: Run a command with elevated privileges (may prompt user for acceptance)&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;sudo&lt;/b&gt;: Run an exec command as a sudoer.&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;isAdminUser&lt;/b&gt;: Determines whether the current user has administrative privileges.&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;service&lt;/b&gt;: A daemon utility. Supports creating Windows services and event logs.&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;list&lt;/b&gt;: A method to list running windows services.&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;kill&lt;/b&gt;: A method to kill a specific windows service (by PID).&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I&amp;#39;ve been working on a cross-platform node.js project lately. While node is great, it isn&amp;#39;t 
+the best tool for every job. For my project, there are a few things the native operating system
+can do much more effectively than node can.  &lt;/p&gt;
+&lt;p&gt;For my project, I really needed to run my code as a background service. There are tools like
+&lt;a href=&quot;https://github.com/nodejitsu/forever&quot;&gt;forever&lt;/a&gt; that keep a node process running all the time, 
+but I wasn&amp;#39;t completely satisfied with them because they didn&amp;#39;t integrate into the OS very 
+well. In Windows, I wanted my application to log to the event log, and I wanted to start/stop 
+it from the Windows services. Both of these things are possible, but the existing features 
+didn&amp;#39;t completely suit my needs.&lt;/p&gt;
+&lt;p&gt;I started out by writing a wrapper around the &lt;a href=&quot;http://nssm.cc&quot;&gt;nssm&lt;/a&gt; utility, which essentially
+creates a background service out of your code. In node-windows, I wrapped several helper methods 
+around this, such as &lt;code&gt;start&lt;/code&gt;, &lt;code&gt;stop&lt;/code&gt;, &lt;code&gt;restart&lt;/code&gt;, and &lt;code&gt;remove&lt;/code&gt;. So, a simple web server
+called &lt;code&gt;myapp.js&lt;/code&gt; could be managed via code like:&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; svc = require(&lt;span class=&quot;string&quot;&gt;'node-windows'&lt;/span&gt;).service;
+
+  svc.start(&lt;span class=&quot;string&quot;&gt;'My App'&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;'C:\path\to\myapp.js'&lt;/span&gt;,&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(){
+    console.log(&lt;span class=&quot;string&quot;&gt;'Started'&lt;/span&gt;);
+  });&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This code will create the background service (called &amp;quot;My App&amp;quot;) if it doesn&amp;#39;t already exist.
+Additionally, node-windows will create an application event log where the app can write 
+log messages.&lt;/p&gt;
+&lt;p&gt;Depending on your Windows environment, these actions on their own can be problematic. For example,
+if you&amp;#39;re developing under a user account with adminsitrative permissions, Windows may prompt you
+to elevate privileges. While UAC can be a nice security feature, it can be a real pain when you&amp;#39;re
+trying to execute code like this programmatically. You can&amp;#39;t get around needing an account
+with administrative privileges to create a service and/or event log, but node-windows provides a
+&lt;code&gt;elevate&lt;/code&gt; method to bypass this.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;elevate&lt;/em&gt; simply wraps a normal node &lt;code&gt;exec&lt;/code&gt; command. If the account has administrative privileges,
+then the script will execute with those privileges and without the prompt.&lt;/p&gt;
+&lt;h2&gt;sudo?!??&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;node-windows&lt;/em&gt; provides a method similarl to &lt;em&gt;sudo&lt;/em&gt; on Linux/Mac. It differs from
+&lt;em&gt;elevate&lt;/em&gt;, since it requires a password. However it will not prompt the user for 
+permission to proceed with an administrative task. Like &lt;em&gt;elevate&lt;/em&gt;, this still requires 
+administrative privileges for the user account, otherwise the command will fail. &lt;/p&gt;
+&lt;p&gt;This command is really meant to be used when you need to specify a user other than the
+account executing the current node process.&lt;/p&gt;
+&lt;h2&gt;Other Features&lt;/h2&gt;
+&lt;p&gt;There are several other helepr features, including methods like &lt;code&gt;isAdminUser&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt; 
+(running services), and &lt;code&gt;kill&lt;/code&gt; (a service). I&amp;#39;ll likely add more as needed/requested and
+as time allows.&lt;/p&gt;
+&lt;p&gt;For full details and updates, follow along at &lt;a href=&quot;http://github.com/coreybutler/node-windows&quot;&gt;github.com.coreybutler/node-windows&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </entry>
+  
     <entry>
       <title>Docpad Wins!</title>
       <link href="http://artofidea.com/cookbook\development\articles/goodbye-tumblr"/>

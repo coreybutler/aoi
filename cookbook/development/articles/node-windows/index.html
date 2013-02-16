@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>The Art of Idea: NodeJS & Microsoft Azure</title>
+    <title>The Art of Idea: Introducing node-windows</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Powered-By" content="DocPad"/>
-    <meta name="description" content="I've been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
-NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
-was loaned. Seeing as my desktop is a workhorse that's more powerful than the combined computing 
-power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
-quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
-writing ANT build scripts to automatically upload my changes to my virtual server.
+    <meta name="description" content="[node-windows](http://github.com/coreybutler/node-windows) is a node.js module designed to
+simplify coding for developers using Microsoft Windows.
 
-Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
-Windows users. Take a look at the video:
+This module focuses on elevated user privileges, detecting user permissions, running node
+apps as a Windows service, and a couple of wrappers around OS-level data.
+
 ">
     <meta name="author" content="Corey Butler (corey@artofidea.com)">
     <meta name="keywords" content="goldglovecb, corey, butler, corey butler, node.js, javascript, ngn, thinkfirst, entrepreneur, coldfusion, ajax, html, web development, web design, git, programming, hacking, hackathon">
@@ -104,57 +101,78 @@ Windows users. Take a look at the video:
   </div>
 </div>
 </div>
-        <h1 class="title">NodeJS & Microsoft Azure</h1>
+        <h1 class="title">Introducing node-windows</h1>
       </div>
     </div>
   </div>
   <div class="page">
-    <span class="subtitle">Published on Sunday, December 11, 2011 by Corey Butler</span>
+    <span class="subtitle">Published on Saturday, February 16, 2013 by Corey Butler</span>
     <div class="page-region">
       <div class="page-region-content post">
-        <p>I&#39;ve been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
-NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
-was loaned. Seeing as my desktop is a workhorse that&#39;s more powerful than the combined computing 
-power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
-quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
-writing ANT build scripts to automatically upload my changes to my virtual server.</p>
-<p>Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
-Windows users. Take a look at the video:
-<!-- more --></p>
-<div align="center">
-<video id="nodeonazure" src="http://ak.channel9.msdn.com/ch9/ef4c/0eb8aee4-97f7-430e-9877-9fb30164ef4c/NodejsWindowsAzureIntro_med_ch9.mp4" controls></video>
+        <p><a href="http://github.com/coreybutler/node-windows">node-windows</a> is a node.js module designed to
+simplify coding for developers using Microsoft Windows.</p>
+<p>This module focuses on elevated user privileges, detecting user permissions, running node
+apps as a Windows service, and a couple of wrappers around OS-level data.</p>
+<!-- more -->
+
+<div id="tldr">
+  <li><b>elevate</b>: Run a command with elevated privileges (may prompt user for acceptance)</li>
+  <li><b>sudo</b>: Run an exec command as a sudoer.</li>
+  <li><b>isAdminUser</b>: Determines whether the current user has administrative privileges.</li>
+  <li><b>service</b>: A daemon utility. Supports creating Windows services and event logs.</li>
+  <li><b>list</b>: A method to list running windows services.</li>
+  <li><b>kill</b>: A method to kill a specific windows service (by PID).</li>
 </div>
 
-<p>If you&#39;re unfamiliar, Microsoft started contributing resources to a native NodeJS port a while ago. The 
-workflow wasn&#39;t very smooth though. Installing <a href="http://github.com/joyent/node/wiki/modules">Node modules</a> 
-meant manually cloning them from Github. It just felt dirty in comparison to the Linux alternatives. It 
-appeared as though Microsoft was (and is still) targeting IIS integration, i.e. more as a plugin to IIS 
-than a replacement.</p>
-<p>Now I haven&#39;t used Node with Azure yet, but a few key points really stood out. The biggest was the fact 
-that <a href="http://npmjs.org">npm</a> appears to work as it does in Linux. That is a big win for my workflow. </p>
-<p>I also really liked the fact there is a <a href="https://www.windowsazure.com/en-us/develop/nodejs/">NodeJS Azure Emulator</a>
-for Windows. I&#39;ve been training a lot of people in the ways of Node lately, all of whom are Windows users. 
-Walking people through a virtual server installation was consuming a lot of time. Now, it appears as though
-a single link can get these folks up and running quickly.</p>
-<p>My first question was whether or not I could use the emulator to develop my applications locally, but still
-deploy to my existing Linux servers. I&#39;m sure Microsoft wouldn&#39;t be terribly thrilled with this, but they&#39;ve
-at least taken away my reason for completely switching to a Mac.</p>
-<p>Since I&#39;ve been wrapped up in the wonderful world of Node, Linux, and JavaScript, I really haven&#39;t had much 
-time to consider Azure as a platform. I&#39;ve been looking at Rackspace, Amazon EC2 (which I use today), and
-several other VPS providers though. This video made me look, and the pricing for Azure is actually pretty 
-comparable (in some cases cheaper) than what I&#39;ve seen with these other services.</p>
-<p>Of course, I have some testing to do. We&#39;ll see how well this holds up with the ever-changing world of NodeJS
-and the multitude of packages that sprout up, but I am currently encouraged by what I&#39;ve seen.</p>
-<h2>UPDATE:</h2>
-<p>There&#39;s a nice little tutorial on using NodeJS on Windows 7 over at <a href="http://dailyjs.com/2012/05/03/windows-and-node-1/">dailyjs.com</a>.</p>
+<p>I&#39;ve been working on a cross-platform node.js project lately. While node is great, it isn&#39;t 
+the best tool for every job. For my project, there are a few things the native operating system
+can do much more effectively than node can.  </p>
+<p>For my project, I really needed to run my code as a background service. There are tools like
+<a href="https://github.com/nodejitsu/forever">forever</a> that keep a node process running all the time, 
+but I wasn&#39;t completely satisfied with them because they didn&#39;t integrate into the OS very 
+well. In Windows, I wanted my application to log to the event log, and I wanted to start/stop 
+it from the Windows services. Both of these things are possible, but the existing features 
+didn&#39;t completely suit my needs.</p>
+<p>I started out by writing a wrapper around the <a href="http://nssm.cc">nssm</a> utility, which essentially
+creates a background service out of your code. In node-windows, I wrapped several helper methods 
+around this, such as <code>start</code>, <code>stop</code>, <code>restart</code>, and <code>remove</code>. So, a simple web server
+called <code>myapp.js</code> could be managed via code like:</p>
+<pre class="highlighted"><code class="javascript">  <span class="keyword">var</span> svc = require(<span class="string">'node-windows'</span>).service;
+
+  svc.start(<span class="string">'My App'</span>,<span class="string">'C:\path\to\myapp.js'</span>,<span class="keyword">function</span>(){
+    console.log(<span class="string">'Started'</span>);
+  });</code></pre>
+<p>This code will create the background service (called &quot;My App&quot;) if it doesn&#39;t already exist.
+Additionally, node-windows will create an application event log where the app can write 
+log messages.</p>
+<p>Depending on your Windows environment, these actions on their own can be problematic. For example,
+if you&#39;re developing under a user account with adminsitrative permissions, Windows may prompt you
+to elevate privileges. While UAC can be a nice security feature, it can be a real pain when you&#39;re
+trying to execute code like this programmatically. You can&#39;t get around needing an account
+with administrative privileges to create a service and/or event log, but node-windows provides a
+<code>elevate</code> method to bypass this.</p>
+<p><em>elevate</em> simply wraps a normal node <code>exec</code> command. If the account has administrative privileges,
+then the script will execute with those privileges and without the prompt.</p>
+<h2>sudo?!??</h2>
+<p><em>node-windows</em> provides a method similarl to <em>sudo</em> on Linux/Mac. It differs from
+<em>elevate</em>, since it requires a password. However it will not prompt the user for 
+permission to proceed with an administrative task. Like <em>elevate</em>, this still requires 
+administrative privileges for the user account, otherwise the command will fail. </p>
+<p>This command is really meant to be used when you need to specify a user other than the
+account executing the current node process.</p>
+<h2>Other Features</h2>
+<p>There are several other helepr features, including methods like <code>isAdminUser</code>, <code>list</code> 
+(running services), and <code>kill</code> (a service). I&#39;ll likely add more as needed/requested and
+as time allows.</p>
+<p>For full details and updates, follow along at <a href="http://github.com/coreybutler/node-windows">github.com.coreybutler/node-windows</a>.</p>
 
         <span class="row-fluid">
           <div class="span12">
             <div style="float: right;">
-              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartofidea.com%2Fcookbook%5Cdevelopment%5Carticles%2Fnodejs-and-microsoft-azure&amp;send=false&amp;layout=button_count&amp;width=105&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
+              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartofidea.com%2Fcookbook%5Cdevelopment%5Carticles%2Fnode-windows&amp;send=false&amp;layout=button_count&amp;width=105&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
               <div class="g-plusone" data-size="medium"></div>
 <script type="text/javascript">(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/plusone.js',s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
-              <a href="https://twitter.com/share" class="twitter-share-button" data-count="" data-via="goldglovecb" data-size="small" data-hashtags="artofidea,azure,javascript,node.js,windows">Tweet</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-count="" data-via="goldglovecb" data-size="small" data-hashtags="artofidea,node.js,npm,windows">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
               <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/Share" data-counter="right" data-showzero="true"></script>
@@ -169,9 +187,7 @@ and the multitude of packages that sprout up, but I am currently encouraged by w
     <h2>More Articles:</h2>
     <ol>
     
-      <li><a href="/cookbook\development\articles/mongoose-schema-structure">Mongoose Schema Structure</a> (8/26/2011)</li>
-    
-      <li><a href="/cookbook\development\articles/node-windows">Introducing node-windows</a> (2/16/2013)</li>
+      <li><a href="/cookbook\development\articles/nodejs-and-microsoft-azure">NodeJS & Microsoft Azure</a> (12/11/2011)</li>
     
     </ol>
   </div>
@@ -213,6 +229,8 @@ and the multitude of packages that sprout up, but I am currently encouraged by w
     <script defer="defer"  src="/../../js/jquery.js"></script><script defer="defer"  src="/../../js/bootstrap-tooltip-min.js"></script><script defer="defer"  src="/../../js/jquery.scrollto-1.4.3.1-min.js"></script><script defer="defer"  src="/../../js/jquery.localscroll-1.2.7-min.js"></script><script defer="defer"  src="/../../js/common.js"></script>
     
     
+    
+      <script defer="defer"  src="/../../js/post.js"></script>
     
   </body>
 </html>
