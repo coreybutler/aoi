@@ -4,13 +4,90 @@
     <subtitle>The blog of Corey Butler.</subtitle>
     <link href="http://artofidea.com/atom.xml" rel="self" />
     <link href="The blog of Corey Butler." />
-    <updated>2013-02-16T21:34:23.416Z</updated>
+    <updated>2013-03-24T23:32:50.869Z</updated>
     <id>http://artofidea.com</id>
     <author>
         <name>Corey Butler</name>
         <email>corey@coreybutler.com</email>
     </author>
     
+    <entry>
+      <title>New node-windows</title>
+      <link href="http://artofidea.com/cookbook\development\articles/node-windows2"/>
+      <updated>2013-03-24T05:00:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/node-windows2</id>
+      <content type="html">&lt;p&gt;I&amp;#39;ve made several major changes to &lt;a href=&quot;http://github.com/coreybutler/node-windows&quot;&gt;node-windows&lt;/a&gt;.
+There are no more dependencies on native node modules, a new service manager has been implemented,
+a new logging feature is available, and new commands have been added.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;div id=&quot;tldr&quot;&gt;
+  &lt;li&gt;Several permissions issues have been resolved.&lt;/li&gt;
+  &lt;li&gt;&amp;quot;npm install -g node-windows&amp;quot; no longer requires Visual Studio or the .NET framework.&lt;/li&gt;
+  &lt;li&gt;Easier to create Windows background services from code.&lt;/li&gt;
+  &lt;li&gt;New list and kill task methods.&lt;/li&gt;
+  &lt;li&gt;MIT &amp;amp; BSD Licenses&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It has been about a month since I released node-windows.
+Since then, I have been working hard on my main Node.js project, which targets multiple platforms.
+I&amp;#39;ve been lucky enough to have other folks do some testing on node-windows though. As a result,
+several issues have been fixed.&lt;/p&gt;
+&lt;h2&gt;Challenges Overcome&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;node-windows no longer has any dependencies on C++ modules!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Node.js developers using Windows face the &lt;code&gt;npm challenge&lt;/code&gt;. For those who haven&amp;#39;t done Node.js
+development on Windows, you can leverage C++ modules like anyone else, but since most developers
+distribute them in source format, you have to compile them. This sucks on Windows. Though &lt;code&gt;npm&lt;/code&gt; does have
+a built-in utility for doing this, it is dependent on software that must be installed on the
+desktop in order to work properly. On Windows, this means installing Visual Basic and the .NET
+3.5 framework. Visual Studio is huge. 2GB+ huge. This is further complicated by flags/switches
+if you&amp;#39;re using VS2012 as opposed to VS2010 (or, ugh, both). It stifles Windows developers,
+especially new developers, and sort of raises this false mantra that you either need to use a Mac
+or &amp;quot;just deal with it&amp;quot;.&lt;/p&gt;
+&lt;p&gt;While the C++ modules used in the first release of node-windows were very helpful, they
+relied on this painful development environment. The new version has replaced all
+of these with alternatives. Some features still require a &lt;code&gt;.exe&lt;/code&gt;, but these are prepackaged
+and distributed with the module. This alleviates the need to build node-windows during the
+npm installation. That doesn&amp;#39;t change anything for those who need to use other C++ modules,
+but I&amp;#39;ve done what I can to make sure node-windows is easy to use.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;node-windows uses new permission detection!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Some developers pointed out issues of being falsely identified as a non-administrative user.
+This has been resolved on all versions of Windows I have access to.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;node-windows won&amp;#39;t put you in callback hell&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The code, specifically the background services part, has been refactored to remove callbacks. Now
+everything is driven by a series of simple events.&lt;/p&gt;
+&lt;h2&gt;New &amp;amp; Updated Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;New Event Logging&lt;/li&gt;
+&lt;li&gt;Task &lt;code&gt;list&lt;/code&gt; &amp;amp; &lt;code&gt;kill&lt;/code&gt; are now functional.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isAdminUser&lt;/code&gt; now uses the new permission detection.&lt;/li&gt;
+&lt;li&gt;Services/daemons have been completely overhauled. Easier syntax, more robust, better logging.&lt;/li&gt;
+&lt;li&gt;Examples&lt;/li&gt;
+&lt;li&gt;Updated Documentation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nssm.exe&lt;/code&gt; was replaced with &lt;code&gt;winsw.exe&lt;/code&gt; (MIT)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;A Word on Native Functionality&lt;/h2&gt;
+&lt;p&gt;With languages like Node.js, it is easy to rewrite functionality, simply
+because it&amp;#39;s simple to write the code. Process monitoring and logging is just one of those areas.
+The major operating systems already have support for this. Rewriting it in Node.js is fun,
+but it really is redundant with what the operating system already offers.&lt;/p&gt;
+&lt;p&gt;The approach I took with node-windows was to leverage as much of the operating system&amp;#39;s core
+functiniality as I could. The only time I made changes is when the operating system didn&amp;#39;t
+fully support a feature. In other words, node-windows was designed to augment functionality,
+not full on replace it.&lt;/p&gt;
+&lt;p&gt;As a result, a different kind of workflow is available with node-windows. Since node-windows
+can create native background services out of a Node.js script, traditional Windows tooling
+can be used. Already using a service monitor to alert you when a process dies? It will work
+with a node-windows service. Perhaps you&amp;#39;re using a Windows log watcher? node-windows processes
+will work with that too since they use the same logging mechanism every other application uses.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;While node-windows only has a few new features, the underlying code has been overhauled in an
+effort to make the module more developer and sysadmin friendly. That said, I&amp;#39;d love to know if
+you&amp;#39;re using it. If you have any issues, please log them on the &lt;a href=&quot;https://github.com/coreybutler/node-windows&quot;&gt;Github page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now it&amp;#39;s time to get working on &lt;code&gt;node-mac&lt;/code&gt;!&lt;/p&gt;
+</content>
+    </entry>
+  
     <entry>
       <title>Introducing node-windows</title>
       <link href="http://artofidea.com/cookbook\development\articles/node-windows"/>
