@@ -68,6 +68,7 @@ body {
    -webkit-box-shadow: inset 0 0 10px #FFF;
    box-shadow:         inset 0 0 10px #FFF;*/
   font-size: 12pt;
+  overflow: auto;
 }
 
 #toolbar div {

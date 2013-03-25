@@ -9,8 +9,8 @@
 <url> <loc>http://artofidea.com/cookbook/extras</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://artofidea.com/cookbook/development</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://artofidea.com/cookbook\development\articles/goodbye-tumblr</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://artofidea.com/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://artofidea.com/about</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://artofidea.com/cookbook\development\articles/node-windows</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://artofidea.com/cookbook\development\articles/node-windows2</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://artofidea.com/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

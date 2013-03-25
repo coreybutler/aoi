@@ -13,15 +13,15 @@ $('.item .date').tooltip({
 });
 
 $(function(){
-  
+
   var $container = $('#cookbookcontent'),
       $checkboxes = $('#filters input');
-  
+
   $container.isotope({
     itemSelector: '.item',
     animationEngine: 'bestAvailable'
   });
-  
+
   $checkboxes.change(function(){
     var filters = [];
     // get checked checkboxes values
@@ -32,11 +32,14 @@ $(function(){
     filters = filters.join(', ');
     $container.isotope({ filter: filters });
   });
-    
+
   $('#shuffle').click(function(){
     $container.isotope('shuffle');
   });
-  
+
   $(".timeago").timeago();
-  
+
+  //$container.isotope('shuffle');
+  $container.isotope('reLayout');
+
 });
