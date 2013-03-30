@@ -1,10 +1,257 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>NodeJS & Microsoft Azure</title>
-		<meta http-equiv="REFRESH" content="0;url=/cookbook\development\articles/nodejs-and-microsoft-azure">
-	</head>
-	<body>
-		This page has moved. You will be automatically redirected to its new location. If you aren't forwarded to the new page, <a href="/cookbook\development\articles/nodejs-and-microsoft-azure">click here</a>.
-	</body>
+<html lang="en">
+  <head>
+    <title>The Art of Idea: NodeJS & Microsoft Azure</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Powered-By" content="DocPad"/>
+    <meta name="description" content="I've been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
+NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
+was loaned. Seeing as my desktop is a workhorse that's more powerful than the combined computing 
+power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
+quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
+writing ANT build scripts to automatically upload my changes to my virtual server.
+
+Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
+Windows users. Take a look at the video:
+">
+    <meta name="author" content="Corey Butler (corey@coreybutler.com)">
+    <meta name="keywords" content="goldglovecb, corey, butler, corey butler, node.js, javascript, ngn, thinkfirst, entrepreneur, coldfusion, ajax, html, web development, web design, git, programming, hacking, hackathon">
+  
+    <!-- Social SEO -->
+    <meta property="og:title" content="The Art of Idea: NodeJS & Microsoft Azure" />
+    <meta property="og:description" content="I've been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
+NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
+was loaned. Seeing as my desktop is a workhorse that's more powerful than the combined computing 
+power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
+quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
+writing ANT build scripts to automatically upload my changes to my virtual server.
+
+Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
+Windows users. Take a look at the video:
+" />
+    
+    <meta property="og:type" content="website" />
+    
+    <meta property="og:author" content="Corey Butler (corey@coreybutler.com)" />
+    <meta property="og:site_name" content="The Art of Idea" />
+    <meta property="og:locale" content="en" />
+  
+    <!-- Styling -->
+    <link  rel="stylesheet" href="/../../css/aoi.css" /><link  rel="stylesheet" href="/../../css/aoi-responsive.css" />
+    <link  rel="stylesheet" href="/../../metro/css/modern.css" /><link  rel="stylesheet" href="/../../metro/css/modern-responsive.css" />
+    
+        <link  rel="stylesheet" href="/../../css/github.css" /><link  rel="stylesheet" href="/../../css/code.css" />
+    
+    
+    
+        <link  rel="stylesheet" href="/../../css/post.css" />
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="/css/font-awesome-ie7.css"><![endif]-->
+
+    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/b8a1284b0d0202c5866d40c04b8bd842?s=16">
+  </head>
+
+  <body>
+  <div class="nav-bar bg-color-blue">
+    <div class="nav-bar-inner padding10">
+      <div class="page">
+        <div class="tb"><div class="nav-bar bg-color-blue">
+  <div class="nav-bar-inner padding10">
+    <ul class="menu">
+      <li><a href="http://artofidea.com"><i class="icon-home"></i></a></li>
+      <li class="divider"></li>
+      
+        
+          <li><a href="http://artofidea.com/about">The Art of Idea</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com/cookbook/development">Inspiration</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com">Career</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com">Entrepreneurship</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com">Ventures</a></li>
+        
+      
+        
+          <li><a href="http://artofidea.com#">Corey Butler</a></li>
+        
+      
+      <li class="divider"></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Follow&nbsp;on&nbsp;Google+" href="https://plus.google.com/111169756342687497578?rel=author" target="_blank"><i class="icon icon-google-plus"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Connect&nbsp;on&nbsp;LinkedIn" href="http://www.linkedin.com/in/coreyabutler" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Projects&nbsp;on&nbsp;Github" href="http://github.com/coreybutler" target="_blank"><i class="icon icon-github"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Follow&nbsp;@goldglovecb" href="http://twitter.com/goldglovecb" target="_blank"><i class="icon icon-twitter"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Call&nbsp;me&nbsp;on&nbsp;Clarity.fm" href="https://clarity.fm/coreybutler" target="_blank"><i class="icon icon-phone"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="RSS&nbsp;Feed" href="http://artofidea.com/atom" target="_blank"><i class="icon icon-feed"></i></a></li>
+      <li><a style="float:left !important; clear:none;" data-placement="bottom" data-toggle="tooltip" rel="tooltip" data-original-title="Subscribe" href="http://feedburner.google.com/fb/a/mailverify?uri=ArtOfIdea&loc=en_US" rel="subscribe-email" title="subscribe via email" target="_blank"><i class="icon icon-mail"></i></a></li>
+          
+    </ul>
+  </div>
+</div>
+</div>
+        <h1 class="title">NodeJS & Microsoft Azure</h1>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+    <span class="subtitle">Published on Sunday, December 11, 2011 by Corey Butler</span>
+    <div class="page-region">
+      <div class="page-region-content post">
+        <p>I&#39;ve been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
+NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
+was loaned. Seeing as my desktop is a workhorse that&#39;s more powerful than the combined computing 
+power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
+quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
+writing ANT build scripts to automatically upload my changes to my virtual server.</p>
+<p>Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
+Windows users. Take a look at the video:
+<!-- more --></p>
+<div align="center">
+<video id="nodeonazure" src="http://ak.channel9.msdn.com/ch9/ef4c/0eb8aee4-97f7-430e-9877-9fb30164ef4c/NodejsWindowsAzureIntro_med_ch9.mp4" controls></video>
+</div>
+
+<p>If you&#39;re unfamiliar, Microsoft started contributing resources to a native NodeJS port a while ago. The 
+workflow wasn&#39;t very smooth though. Installing <a href="http://github.com/joyent/node/wiki/modules">Node modules</a> 
+meant manually cloning them from Github. It just felt dirty in comparison to the Linux alternatives. It 
+appeared as though Microsoft was (and is still) targeting IIS integration, i.e. more as a plugin to IIS 
+than a replacement.</p>
+<p>Now I haven&#39;t used Node with Azure yet, but a few key points really stood out. The biggest was the fact 
+that <a href="http://npmjs.org">npm</a> appears to work as it does in Linux. That is a big win for my workflow. </p>
+<p>I also really liked the fact there is a <a href="https://www.windowsazure.com/en-us/develop/nodejs/">NodeJS Azure Emulator</a>
+for Windows. I&#39;ve been training a lot of people in the ways of Node lately, all of whom are Windows users. 
+Walking people through a virtual server installation was consuming a lot of time. Now, it appears as though
+a single link can get these folks up and running quickly.</p>
+<p>My first question was whether or not I could use the emulator to develop my applications locally, but still
+deploy to my existing Linux servers. I&#39;m sure Microsoft wouldn&#39;t be terribly thrilled with this, but they&#39;ve
+at least taken away my reason for completely switching to a Mac.</p>
+<p>Since I&#39;ve been wrapped up in the wonderful world of Node, Linux, and JavaScript, I really haven&#39;t had much 
+time to consider Azure as a platform. I&#39;ve been looking at Rackspace, Amazon EC2 (which I use today), and
+several other VPS providers though. This video made me look, and the pricing for Azure is actually pretty 
+comparable (in some cases cheaper) than what I&#39;ve seen with these other services.</p>
+<p>Of course, I have some testing to do. We&#39;ll see how well this holds up with the ever-changing world of NodeJS
+and the multitude of packages that sprout up, but I am currently encouraged by what I&#39;ve seen.</p>
+<h2>UPDATE:</h2>
+<p>There&#39;s a nice little tutorial on using NodeJS on Windows 7 over at <a href="http://dailyjs.com/2012/05/03/windows-and-node-1/">dailyjs.com</a>.</p>
+
+        <span class="row-fluid">
+          <div class="span12">
+            <div style="float: right;">
+              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartofidea.com%2Fcookbook%5Cdevelopment%5Carticles%2Fnodejs-and-microsoft-azure&amp;send=false&amp;layout=button_count&amp;width=105&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
+              <div class="g-plusone" data-size="medium"></div>
+<script type="text/javascript">(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/plusone.js',s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-count="" data-via="goldglovecb" data-size="small" data-hashtags="artofidea,azure,javascript,node.js,windows">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/Share" data-counter="right" data-showzero="true"></script>
+            </div>  
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="page related">
+    <h2>More Articles:</h2>
+    <ol>
+    
+      <li><a href="/cookbook\development\articles/fenix">Fenix</a> (3/30/2013)</li>
+    
+      <li><a href="/cookbook\development\articles/node-windows">Introducing node-windows</a> (2/16/2013)</li>
+    
+      <li><a href="/cookbook\development\articles/node-windows2">New node-windows</a> (3/24/2013)</li>
+    
+      <li><a href="/cookbook\development\articles/mongoose-schema-structure">Mongoose Schema Structure</a> (8/26/2011)</li>
+    
+    </ol>
+  </div>
+  
+  
+  <div class="page comments">
+    <h2>Comments</h2>
+    <!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        window.disqus_shortname = 'artofidea';
+        window.disqus_developer = 0;
+        window.disqus_url = document.location.href;
+        window.disqus_identifier = 'services-disqus';
+        window.disqus_title = 'disqus.html';
+        if ( window.DISQUS ) {
+            return DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = window.disqus_identifier;
+                    this.page.url = window.disqus_url;
+                    this.page.title = window.disqus_title;
+                }
+            });
+        }
+        else {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+    
+    <a href="#" class="scrollup"></a>
+    
+    <script >(function(){
+	// Did we just livereload?
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+// Listen for the regenerated event
+// and perform a reload of the page when the event occurs
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		// Inject socket.io into our page then listen once loaded
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		inject();
+	}
+})();</script><script defer="defer"  src="/../../js/jquery.js"></script><script defer="defer"  src="/../../js/bootstrap-tooltip-min.js"></script><script defer="defer"  src="/../../js/jquery.scrollto-1.4.3.1-min.js"></script><script defer="defer"  src="/../../js/jquery.localscroll-1.2.7-min.js"></script><script defer="defer"  src="/../../js/common.js"></script>
+    
+    
+    
+  </body>
 </html>
