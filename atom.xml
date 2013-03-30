@@ -4,13 +4,85 @@
     <subtitle>The blog of Corey Butler.</subtitle>
     <link href="http://artofidea.com/atom.xml" rel="self" />
     <link href="The blog of Corey Butler." />
-    <updated>2013-03-25T00:05:08.040Z</updated>
+    <updated>2013-03-30T22:25:32.338Z</updated>
     <id>http://artofidea.com</id>
     <author>
         <name>Corey Butler</name>
         <email>corey@coreybutler.com</email>
     </author>
     
+    <entry>
+      <title>Fenix</title>
+      <link href="http://artofidea.com/cookbook\development\articles/fenix"/>
+      <updated>2013-03-30T19:23:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/fenix</id>
+      <content type="html">&lt;p&gt;Ever needed a really quick static web server? I find myself needing
+the most basic stuff sometimes. On more than one occassion, I have
+needed a static web server for serving mock &lt;code&gt;.json&lt;/code&gt; files while
+prototyping a front end - normally to bypass cross-origin
+request &amp;quot;problems&amp;quot; that simply slow down mockup work.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/coreybutler/fenix/master/src/resources/fenix.png&quot; align=&quot;left&quot;/&gt;
+&lt;a href=&quot;http://coreybutler.github.com/fenix&quot;&gt;Fenix&lt;/a&gt; is a (free) desktop utility
+I wrote to provide ad-hoc static servers on a dime. Specify a directory
+on your computer and a port to run on, then launch. Done.
+&lt;!-- more --&gt;&lt;/p&gt;
+&lt;div id=&quot;tldr&quot;&gt;
+  &lt;li&gt;Fenix is a free ad-hoc static web server generation utility for Windows, Mac, &amp;amp; Linux.&lt;/li&gt;
+  &lt;li&gt;Built with Node.js for the DESKTOP (not a browser).&lt;/li&gt;
+  &lt;li&gt;Makes things like mockup REST servers (using .json files) simple.&lt;/li&gt;
+  &lt;li&gt;Avoid cross-origin issues during early development.&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;What does Fenix look like?&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/coreybutler/fenix/master/docs/screen1.jpg&quot; alt=&quot;Fenix In Action&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Why another static web server?&lt;/h2&gt;
+&lt;p&gt;If you follow me, you probably already know I do a lot of JavaScript work these days,
+and I&amp;#39;ve taken a liking to Node.js over the years. You may not know I also do a fair
+amount of advanced front-end web work, especially with &lt;a href=&quot;http://www.sencha.com&quot;&gt;Sencha&lt;/a&gt;
+ExtJS and Touch.&lt;/p&gt;
+&lt;p&gt;Lately I&amp;#39;ve used Sencha Architect to jumpstart app UI work. Architect is a visual utility
+for developing Ext JS and Touch applications. It has some great features, like
+data modeling and loading. It looks a bit like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cdn.sencha.io/img/20130314-sencha-architect-2-2/architect-2.png&quot; alt=&quot;Architect&quot;&gt;&lt;/p&gt;
+&lt;p&gt;However; if you want to load data like this, you can&amp;#39;t always just
+load it from a JSON file on your local computer. You&amp;#39;ll likely end up with cross-origin
+errors. Additionally, the software assumes you have a server running on port 81. The
+default prefix for launching a preview is &lt;code&gt;http://localhost:81/&lt;/code&gt;, not &lt;code&gt;file://path/to/prj&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I typically start new applications by doing the screen layouts first. Then I&amp;#39;ll write
+stub JSON files so there is something tangible and somewhat realistic to work with. Those
+are supposed to be served to the app-in-progress and changed through development. During
+this stage of development, less infrastructure is more. I don&amp;#39;t want to setup Apache or IIS.
+If you&amp;#39;re a Node.js person like myself, you probably don&amp;#39;t already have Apache/IIS installed
+and don&amp;#39;t really like the idea of adding all that bloat to your workstation. It seems unnecessary
+to setup a database or limited REST service just for mockup work. There is a time for that infrastructe.
+It comes &lt;em&gt;after&lt;/em&gt; the mockup stage, not before it.&lt;/p&gt;
+&lt;p&gt;So, the case for having a lightweight static web server was pretty built up in my mind. I
+looked around - most things were outdated.&lt;/p&gt;
+&lt;h2&gt;Node.js on the Desktop&lt;/h2&gt;
+&lt;p&gt;There are some great Node.js modules for launching static web servers via
+the command line, but I didn&amp;#39;t find anything that would persist your session. If I
+reboot my computer, I have to restart my servers. I also didn&amp;#39;t like how some of
+the utilities require you to keep a terminal window open to keep the server running.
+I end up with a few of these and it clutters screen real estate. Do I sound picky yet? :-)&lt;/p&gt;
+&lt;p&gt;I&amp;#39;ve also had a nagging feeling to write something for the desktop. I also wanted an
+excuse to play with the Intel-sponsored &lt;a href=&quot;https://github.com/rogerwang/node-webkit&quot;&gt;node-webkit&lt;/a&gt; library.
+This library allows you to write cross-platform desktop software using HTML5/CSS3/JS with the features
+of Node.js. It&amp;#39;s what Adobe Air should have been, TideSDK does, or what Sencha Desktop Packager does...
+except for free.&lt;/p&gt;
+&lt;p&gt;So, I set out to wrap node-webkit around my preferred Node.js static web server utility
+(&lt;a href=&quot;https://github.com/visionmedia/send&quot;&gt;send&lt;/a&gt;). The app is simple enough for HTML/CSS &amp;amp; jQuery,
+so I started hacking on this as a small weekend project. Voila.&lt;/p&gt;
+&lt;h2&gt;Fenix Future&lt;/h2&gt;
+&lt;p&gt;I had to restrain myself from adding too many features to this release. With an ever-demanding
+schedule, I had to make sure it fit into the weekend. I cut out logging, system tray access, and
+held off on Growl notifications. Some of the structure is in place, so it can be added... if I
+ever get another free weekend.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Fenix was my fun project for the day and a great experiment. Feel free to use it and provide
+feedback over at Github.&lt;/p&gt;
+</content>
+    </entry>
+  
     <entry>
       <title>New node-windows</title>
       <link href="http://artofidea.com/cookbook\development\articles/node-windows2"/>

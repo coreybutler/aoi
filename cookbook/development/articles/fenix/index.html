@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>The Art of Idea: Introducing node-windows</title>
+    <title>The Art of Idea: Fenix</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Powered-By" content="DocPad"/>
-    <meta name="description" content="node-windows is a node.js module designed to
-simplify coding for developers using Microsoft Windows.
+    <meta name="description" content="Ever needed a really quick static web server? I find myself needing
+the most basic stuff sometimes. On more than one occassion, I have
+needed a static web server for serving mock `.json` files while
+prototyping a front end - normally to bypass cross-origin
+request "problems" that simply slow down mockup work.
 
-This module focuses on elevated user privileges, detecting user permissions, running node
-apps as a Windows service, and a couple of wrappers around OS-level data.
-
+<img src="https://raw.github.com/coreybutler/fenix/master/src/resources/fenix.png" align="left"/>
+Fenix desktop utility
+I wrote to provide ad-hoc static servers on a dime. Specify a directory
+on your computer and a port to run on, then launch. Done.
 ">
     <meta name="author" content="Corey Butler (corey@coreybutler.com)">
     <meta name="keywords" content="goldglovecb, corey, butler, corey butler, node.js, javascript, ngn, thinkfirst, entrepreneur, coldfusion, ajax, html, web development, web design, git, programming, hacking, hackathon">
   
     <!-- Social SEO -->
-    <meta property="og:title" content="The Art of Idea: Introducing node-windows" />
-    <meta property="og:description" content="node-windows is a node.js module designed to
-simplify coding for developers using Microsoft Windows.
+    <meta property="og:title" content="The Art of Idea: Fenix" />
+    <meta property="og:description" content="Ever needed a really quick static web server? I find myself needing
+the most basic stuff sometimes. On more than one occassion, I have
+needed a static web server for serving mock `.json` files while
+prototyping a front end - normally to bypass cross-origin
+request "problems" that simply slow down mockup work.
 
-This module focuses on elevated user privileges, detecting user permissions, running node
-apps as a Windows service, and a couple of wrappers around OS-level data.
-
+<img src="https://raw.github.com/coreybutler/fenix/master/src/resources/fenix.png" align="left"/>
+Fenix desktop utility
+I wrote to provide ad-hoc static servers on a dime. Specify a directory
+on your computer and a port to run on, then launch. Done.
 " />
     
     <meta property="og:type" content="website" />
@@ -99,78 +107,86 @@ apps as a Windows service, and a couple of wrappers around OS-level data.
   </div>
 </div>
 </div>
-        <h1 class="title">Introducing node-windows</h1>
+        <h1 class="title">Fenix</h1>
       </div>
     </div>
   </div>
   <div class="page">
-    <span class="subtitle">Published on Saturday, February 16, 2013 by Corey Butler</span>
+    <span class="subtitle">Published on Saturday, March 30, 2013 by Corey Butler</span>
     <div class="page-region">
       <div class="page-region-content post">
-        <p><a href="http://github.com/coreybutler/node-windows">node-windows</a> is a node.js module designed to
-simplify coding for developers using Microsoft Windows.</p>
-<p>This module focuses on elevated user privileges, detecting user permissions, running node
-apps as a Windows service, and a couple of wrappers around OS-level data.</p>
-<!-- more -->
-
+        <p>Ever needed a really quick static web server? I find myself needing
+the most basic stuff sometimes. On more than one occassion, I have
+needed a static web server for serving mock <code>.json</code> files while
+prototyping a front end - normally to bypass cross-origin
+request &quot;problems&quot; that simply slow down mockup work.</p>
+<p><img src="https://raw.github.com/coreybutler/fenix/master/src/resources/fenix.png" align="left"/>
+<a href="http://coreybutler.github.com/fenix">Fenix</a> is a (free) desktop utility
+I wrote to provide ad-hoc static servers on a dime. Specify a directory
+on your computer and a port to run on, then launch. Done.
+<!-- more --></p>
 <div id="tldr">
-  <li><b>elevate</b>: Run a command with elevated privileges (may prompt user for acceptance)</li>
-  <li><b>sudo</b>: Run an exec command as a sudoer.</li>
-  <li><b>isAdminUser</b>: Determines whether the current user has administrative privileges.</li>
-  <li><b>service</b>: A daemon utility. Supports creating Windows services and event logs.</li>
-  <li><b>list</b>: A method to list running windows services.</li>
-  <li><b>kill</b>: A method to kill a specific windows service (by PID).</li>
+  <li>Fenix is a free ad-hoc static web server generation utility for Windows, Mac, &amp; Linux.</li>
+  <li>Built with Node.js for the DESKTOP (not a browser).</li>
+  <li>Makes things like mockup REST servers (using .json files) simple.</li>
+  <li>Avoid cross-origin issues during early development.</li>
 </div>
 
-<p>I&#39;ve been working on a cross-platform node.js project lately. While node is great, it isn&#39;t 
-the best tool for every job. For my project, there are a few things the native operating system
-can do much more effectively than node can.  </p>
-<p>For my project, I really needed to run my code as a background service. There are tools like
-<a href="https://github.com/nodejitsu/forever">forever</a> that keep a node process running all the time, 
-but I wasn&#39;t completely satisfied with them because they didn&#39;t integrate into the OS very 
-well. In Windows, I wanted my application to log to the event log, and I wanted to start/stop 
-it from the Windows services. Both of these things are possible, but the existing features 
-didn&#39;t completely suit my needs.</p>
-<p>I started out by writing a wrapper around the <a href="http://nssm.cc">nssm</a> utility, which essentially
-creates a background service out of your code. In node-windows, I wrapped several helper methods 
-around this, such as <code>start</code>, <code>stop</code>, <code>restart</code>, and <code>remove</code>. So, a simple web server
-called <code>myapp.js</code> could be managed via code like:</p>
-<pre class="highlighted"><code class="javascript">  <span class="keyword">var</span> svc = require(<span class="string">'node-windows'</span>).service;
-
-  svc.start(<span class="string">'My App'</span>,<span class="string">'C:\path\to\myapp.js'</span>,<span class="keyword">function</span>(){
-    console.log(<span class="string">'Started'</span>);
-  });</code></pre>
-<p>This code will create the background service (called &quot;My App&quot;) if it doesn&#39;t already exist.
-Additionally, node-windows will create an application event log where the app can write 
-log messages.</p>
-<p>Depending on your Windows environment, these actions on their own can be problematic. For example,
-if you&#39;re developing under a user account with adminsitrative permissions, Windows may prompt you
-to elevate privileges. While UAC can be a nice security feature, it can be a real pain when you&#39;re
-trying to execute code like this programmatically. You can&#39;t get around needing an account
-with administrative privileges to create a service and/or event log, but node-windows provides a
-<code>elevate</code> method to bypass this.</p>
-<p><em>elevate</em> simply wraps a normal node <code>exec</code> command. If the account has administrative privileges,
-then the script will execute with those privileges and without the prompt.</p>
-<h2>sudo?!??</h2>
-<p><em>node-windows</em> provides a method similarl to <em>sudo</em> on Linux/Mac. It differs from
-<em>elevate</em>, since it requires a password. However it will not prompt the user for 
-permission to proceed with an administrative task. Like <em>elevate</em>, this still requires 
-administrative privileges for the user account, otherwise the command will fail. </p>
-<p>This command is really meant to be used when you need to specify a user other than the
-account executing the current node process.</p>
-<h2>Other Features</h2>
-<p>There are several other helepr features, including methods like <code>isAdminUser</code>, <code>list</code> 
-(running services), and <code>kill</code> (a service). I&#39;ll likely add more as needed/requested and
-as time allows.</p>
-<p>For full details and updates, follow along at <a href="http://github.com/coreybutler/node-windows">github.com.coreybutler/node-windows</a>.</p>
+<h2>What does Fenix look like?</h2>
+<p><img src="https://raw.github.com/coreybutler/fenix/master/docs/screen1.jpg" alt="Fenix In Action"></p>
+<h2>Why another static web server?</h2>
+<p>If you follow me, you probably already know I do a lot of JavaScript work these days,
+and I&#39;ve taken a liking to Node.js over the years. You may not know I also do a fair
+amount of advanced front-end web work, especially with <a href="http://www.sencha.com">Sencha</a>
+ExtJS and Touch.</p>
+<p>Lately I&#39;ve used Sencha Architect to jumpstart app UI work. Architect is a visual utility
+for developing Ext JS and Touch applications. It has some great features, like
+data modeling and loading. It looks a bit like this:</p>
+<p><img src="http://cdn.sencha.io/img/20130314-sencha-architect-2-2/architect-2.png" alt="Architect"></p>
+<p>However; if you want to load data like this, you can&#39;t always just
+load it from a JSON file on your local computer. You&#39;ll likely end up with cross-origin
+errors. Additionally, the software assumes you have a server running on port 81. The
+default prefix for launching a preview is <code>http://localhost:81/</code>, not <code>file://path/to/prj</code>.</p>
+<p>I typically start new applications by doing the screen layouts first. Then I&#39;ll write
+stub JSON files so there is something tangible and somewhat realistic to work with. Those
+are supposed to be served to the app-in-progress and changed through development. During
+this stage of development, less infrastructure is more. I don&#39;t want to setup Apache or IIS.
+If you&#39;re a Node.js person like myself, you probably don&#39;t already have Apache/IIS installed
+and don&#39;t really like the idea of adding all that bloat to your workstation. It seems unnecessary
+to setup a database or limited REST service just for mockup work. There is a time for that infrastructe.
+It comes <em>after</em> the mockup stage, not before it.</p>
+<p>So, the case for having a lightweight static web server was pretty built up in my mind. I
+looked around - most things were outdated.</p>
+<h2>Node.js on the Desktop</h2>
+<p>There are some great Node.js modules for launching static web servers via
+the command line, but I didn&#39;t find anything that would persist your session. If I
+reboot my computer, I have to restart my servers. I also didn&#39;t like how some of
+the utilities require you to keep a terminal window open to keep the server running.
+I end up with a few of these and it clutters screen real estate. Do I sound picky yet? :-)</p>
+<p>I&#39;ve also had a nagging feeling to write something for the desktop. I also wanted an
+excuse to play with the Intel-sponsored <a href="https://github.com/rogerwang/node-webkit">node-webkit</a> library.
+This library allows you to write cross-platform desktop software using HTML5/CSS3/JS with the features
+of Node.js. It&#39;s what Adobe Air should have been, TideSDK does, or what Sencha Desktop Packager does...
+except for free.</p>
+<p>So, I set out to wrap node-webkit around my preferred Node.js static web server utility
+(<a href="https://github.com/visionmedia/send">send</a>). The app is simple enough for HTML/CSS &amp; jQuery,
+so I started hacking on this as a small weekend project. Voila.</p>
+<h2>Fenix Future</h2>
+<p>I had to restrain myself from adding too many features to this release. With an ever-demanding
+schedule, I had to make sure it fit into the weekend. I cut out logging, system tray access, and
+held off on Growl notifications. Some of the structure is in place, so it can be added... if I
+ever get another free weekend.</p>
+<h2>Conclusion</h2>
+<p>Fenix was my fun project for the day and a great experiment. Feel free to use it and provide
+feedback over at Github.</p>
 
         <span class="row-fluid">
           <div class="span12">
             <div style="float: right;">
-              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartofidea.com%2Fcookbook%5Cdevelopment%5Carticles%2Fnode-windows&amp;send=false&amp;layout=button_count&amp;width=105&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
+              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartofidea.com%2Fcookbook%5Cdevelopment%5Carticles%2Ffenix&amp;send=false&amp;layout=button_count&amp;width=105&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
               <div class="g-plusone" data-size="medium"></div>
 <script type="text/javascript">(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/plusone.js',s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
-              <a href="https://twitter.com/share" class="twitter-share-button" data-count="" data-via="goldglovecb" data-size="small" data-hashtags="artofidea,node.js,npm,windows">Tweet</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-count="" data-via="goldglovecb" data-size="small" data-hashtags="artofidea,fenix,web,node.js">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
               <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/Share" data-counter="right" data-showzero="true"></script>
@@ -185,7 +201,7 @@ as time allows.</p>
     <h2>More Articles:</h2>
     <ol>
     
-      <li><a href="/cookbook\development\articles/fenix">Fenix</a> (3/30/2013)</li>
+      <li><a href="/cookbook\development\articles/node-windows">Introducing node-windows</a> (2/16/2013)</li>
     
       <li><a href="/cookbook\development\articles/nodejs-and-microsoft-azure">NodeJS & Microsoft Azure</a> (12/11/2011)</li>
     
