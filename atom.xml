@@ -4,7 +4,7 @@
     <subtitle>The blog of Corey Butler.</subtitle>
     <link href="http://artofidea.com/atom.xml" rel="self" />
     <link href="The blog of Corey Butler." />
-    <updated>2013-03-30T22:25:32.338Z</updated>
+    <updated>2013-03-30T22:28:56.033Z</updated>
     <id>http://artofidea.com</id>
     <author>
         <name>Corey Butler</name>
@@ -21,7 +21,7 @@ the most basic stuff sometimes. On more than one occassion, I have
 needed a static web server for serving mock &lt;code&gt;.json&lt;/code&gt; files while
 prototyping a front end - normally to bypass cross-origin
 request &amp;quot;problems&amp;quot; that simply slow down mockup work.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.github.com/coreybutler/fenix/master/src/resources/fenix.png&quot; align=&quot;left&quot;/&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/coreybutler/fenix/master/src/resources/fenix.png&quot; align=&quot;right&quot; hspace=&quot;3&quot;/&gt;
 &lt;a href=&quot;http://coreybutler.github.com/fenix&quot;&gt;Fenix&lt;/a&gt; is a (free) desktop utility
 I wrote to provide ad-hoc static servers on a dime. Specify a directory
 on your computer and a port to run on, then launch. Done.
@@ -69,8 +69,8 @@ excuse to play with the Intel-sponsored &lt;a href=&quot;https://github.com/roge
 This library allows you to write cross-platform desktop software using HTML5/CSS3/JS with the features
 of Node.js. It&amp;#39;s what Adobe Air should have been, TideSDK does, or what Sencha Desktop Packager does...
 except for free.&lt;/p&gt;
-&lt;p&gt;So, I set out to wrap node-webkit around my preferred Node.js static web server utility
-(&lt;a href=&quot;https://github.com/visionmedia/send&quot;&gt;send&lt;/a&gt;). The app is simple enough for HTML/CSS &amp;amp; jQuery,
+&lt;p&gt;So, I set out to wrap node-webkit around my preferred Node.js static web server
+&lt;a href=&quot;https://github.com/visionmedia/send&quot;&gt;utility&lt;/a&gt;. The app is simple enough for HTML/CSS &amp;amp; jQuery,
 so I started hacking on this as a small weekend project. Voila.&lt;/p&gt;
 &lt;h2&gt;Fenix Future&lt;/h2&gt;
 &lt;p&gt;I had to restrain myself from adding too many features to this release. With an ever-demanding
