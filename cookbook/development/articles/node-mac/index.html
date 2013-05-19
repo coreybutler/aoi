@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>The Art of Idea: NodeJS & Microsoft Azure</title>
+    <title>The Art of Idea: Introducing node-mac</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Powered-By" content="DocPad v6.34.2"/>
-    <meta name="description" content="I've been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
-NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
-was loaned. Seeing as my desktop is a workhorse that's more powerful than the combined computing 
-power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
-quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
-writing ANT build scripts to automatically upload my changes to my virtual server.
+    <meta name="description" content="node-mac allows developers to run Node.js scripts
+as native background processes on OSX.
 
-Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
-Windows users. Take a look at the video:
+By providing a wrapper around `launchd`, node-mac is able to simplify the creation and management
+of background services on a Mac. This project is a port of node-windows
+
 ">
     <meta name="author" content="Corey Butler (corey@coreybutler.com)">
     <meta name="keywords" content="goldglovecb, corey, butler, corey butler, node.js, javascript, ngn, thinkfirst, entrepreneur, coldfusion, ajax, html, web development, web design, git, programming, hacking, hackathon">
   
     <!-- Social SEO -->
-    <meta property="og:title" content="The Art of Idea: NodeJS & Microsoft Azure" />
-    <meta property="og:description" content="I've been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
-NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
-was loaned. Seeing as my desktop is a workhorse that's more powerful than the combined computing 
-power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
-quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
-writing ANT build scripts to automatically upload my changes to my virtual server.
+    <meta property="og:title" content="The Art of Idea: Introducing node-mac" />
+    <meta property="og:description" content="node-mac allows developers to run Node.js scripts
+as native background processes on OSX.
 
-Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
-Windows users. Take a look at the video:
+By providing a wrapper around `launchd`, node-mac is able to simplify the creation and management
+of background services on a Mac. This project is a port of node-windows
+
 " />
     
     <meta property="og:type" content="website" />
@@ -101,57 +95,78 @@ Windows users. Take a look at the video:
   </div>
 </div>
 </div>
-        <h1 class="title">NodeJS & Microsoft Azure</h1>
+        <h1 class="title">Introducing node-mac</h1>
       </div>
     </div>
   </div>
   <div class="page">
-    <span class="subtitle">Published on Sunday, December 11, 2011 by Corey Butler</span>
+    <span class="subtitle">Published on Saturday, May 18, 2013 by Corey Butler</span>
     <div class="page-region">
       <div class="page-region-content post">
-        <p>I&#39;ve been working with NodeJS for just under 2 years now, primarily from my Windows-based desktop.
-NodeJS was restricted to *nix platforms, which gave me a lot of appreciation for the Macbook Pro I 
-was loaned. Seeing as my desktop is a workhorse that&#39;s more powerful than the combined computing 
-power of most of my data center, I installed some virtual servers to use Node on Linux. This works 
-quite well, but has some annoyances. For example, I develop with Eclipse and Aptana, and I ended up 
-writing ANT build scripts to automatically upload my changes to my virtual server.</p>
-<p>Yesterday, an interesting effort from Microsoft was released, providing some cool functionality for 
-Windows users. Take a look at the video:
-<!-- more --></p>
-<div align="center">
-<video id="nodeonazure" src="http://ak.channel9.msdn.com/ch9/ef4c/0eb8aee4-97f7-430e-9877-9fb30164ef4c/NodejsWindowsAzureIntro_med_ch9.mp4" controls></video>
+        <p><a href="http://github.com/coreybutler/node-mac">node-mac</a> allows developers to run Node.js scripts
+as native background processes on OSX.</p>
+<p>By providing a wrapper around <code>launchd</code>, node-mac is able to simplify the creation and management
+of background services on a Mac. This project is a port of <a href="http://github.com/coreybutler/node-windows">node-windows</a></p>
+<!-- more -->
+
+<div id="tldr">
+  Run Node.js scripts as native background processes on OSX.
+  This is a port of <a href="http://github.com/coreybutler/node-windows">node-windows</a>.
 </div>
 
-<p>If you&#39;re unfamiliar, Microsoft started contributing resources to a native NodeJS port a while ago. The 
-workflow wasn&#39;t very smooth though. Installing <a href="http://github.com/joyent/node/wiki/modules">Node modules</a> 
-meant manually cloning them from Github. It just felt dirty in comparison to the Linux alternatives. It 
-appeared as though Microsoft was (and is still) targeting IIS integration, i.e. more as a plugin to IIS 
-than a replacement.</p>
-<p>Now I haven&#39;t used Node with Azure yet, but a few key points really stood out. The biggest was the fact 
-that <a href="http://npmjs.org">npm</a> appears to work as it does in Linux. That is a big win for my workflow. </p>
-<p>I also really liked the fact there is a <a href="https://www.windowsazure.com/en-us/develop/nodejs/">NodeJS Azure Emulator</a>
-for Windows. I&#39;ve been training a lot of people in the ways of Node lately, all of whom are Windows users. 
-Walking people through a virtual server installation was consuming a lot of time. Now, it appears as though
-a single link can get these folks up and running quickly.</p>
-<p>My first question was whether or not I could use the emulator to develop my applications locally, but still
-deploy to my existing Linux servers. I&#39;m sure Microsoft wouldn&#39;t be terribly thrilled with this, but they&#39;ve
-at least taken away my reason for completely switching to a Mac.</p>
-<p>Since I&#39;ve been wrapped up in the wonderful world of Node, Linux, and JavaScript, I really haven&#39;t had much 
-time to consider Azure as a platform. I&#39;ve been looking at Rackspace, Amazon EC2 (which I use today), and
-several other VPS providers though. This video made me look, and the pricing for Azure is actually pretty 
-comparable (in some cases cheaper) than what I&#39;ve seen with these other services.</p>
-<p>Of course, I have some testing to do. We&#39;ll see how well this holds up with the ever-changing world of NodeJS
-and the multitude of packages that sprout up, but I am currently encouraged by what I&#39;ve seen.</p>
-<h2>UPDATE:</h2>
-<p>There&#39;s a nice little tutorial on using NodeJS on Windows 7 over at <a href="http://dailyjs.com/2012/05/03/windows-and-node-1/">dailyjs.com</a>.</p>
+<p>I&#39;m still working on my Node.js distributed systems engine, which gets close to release every day.
+Developing apps on distributed systems poses unique challenges, such as replicating infrastructure.
+For example, you may develop on a Mac, but deploy on Windows. If you need a long-running
+process (like a web server), you have to rig up something or use a node daemon manager like <code>forever</code>.
+While these node tools are very helpful, they&#39;re redundant. The operating system already provides
+well tested capabilities for running background processes.</p>
+<p>I previsouly released <a href="http://github.com/coreybutler/node-windows">node-windows</a>, which supports
+th creation/management of background processes on Windows. Node-mac provides the same functionality
+with essentially the same API. While each of these modules are independent, they were designed with
+integration in mind. The goal is to ultimately provide a common API to create a background
+process from JavaScript, regardless of the operating system it is running on. While this responsibility
+is best suited for my upcoming platform, node-windows and node-mac go a long ways towards this goal.</p>
+<h2>How-To</h2>
+<p>Creating an OSX background process from code is pretty straightforward.</p>
+<pre class="highlighted"><code class="javascript">  <span class="keyword">var</span> Service = require(<span class="string">'node-mac'</span>).Service;
+
+  <span class="comment">// Create a new service object</span>
+  <span class="keyword">var</span> svc = <span class="keyword">new</span> Service({
+    name:<span class="string">'Hello World'</span>,
+    description: <span class="string">'The nodejs.org example web server.'</span>,
+    script: <span class="string">'/path/to/helloworld.js'</span>)
+  });
+
+  <span class="comment">// Listen for the "install" event, which indicates the</span>
+  <span class="comment">// process is available as a service.</span>
+  svc.on(<span class="string">'install'</span>,<span class="keyword">function</span>(){
+    svc.start();
+  });
+
+  svc.install();</code></pre>
+<p>The code above creates the process on your Mac and makes it available from the Activity Monitor.</p>
+<p><img src="https://raw.github.com/coreybutler/node-mac/master/docs/helloworlddaemon.png" alt="Windows Mac"></p>
+<p>When the service is installed, it also creates log files for standard output and errors.</p>
+<p><img src="https://raw.github.com/coreybutler/node-mac/master/docs/helloworldlog.png" alt="Mac log"></p>
+<p>Like node-windows, node-mac leverages a Node.js wrapper that gives developers more control over how
+the background process responds to failures, crashes, etc. For full details, read the documentation
+on <a href="https://github.com/coreybutler/node-mac">Github</a> or the <a href="https://coreybutler.github.io/node-mac">node-mac documentation portal</a>.</p>
+<h2>New Documentation</h2>
+<p>I have been using <a href="http://github.com/senchalabs/jsduck">JSDuck</a> to document Node.JS and other
+languages for a while now. I decided to put a little effort into using this system for node-windows
+and node-mac, even though the API&#39;s are really small.</p>
+<h2>Other Features</h2>
+<p>I&#39;ll likely add more as needed/requested and as time allows. I&#39;m also open to contirbutions.</p>
+<h2>Conclusion</h2>
+<p>Now go forth and daemonize Node.js on your Mac. Then tell me how it goes via Github!</p>
 
         <span class="row-fluid">
           <div class="span12">
             <div style="float: right;">
-              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartofidea.com%2Fcookbook%5Cdevelopment%5Carticles%2Fnodejs-and-microsoft-azure&amp;send=false&amp;layout=button_count&amp;width=105&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
+              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartofidea.com%2Fcookbook%5Cdevelopment%5Carticles%2Fnode-mac&amp;send=false&amp;layout=button_count&amp;width=105&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
               <div class="g-plusone" data-size="medium"></div>
 <script type="text/javascript">(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/plusone.js',s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
-              <a href="https://twitter.com/share" class="twitter-share-button" data-count="" data-via="goldglovecb" data-size="small" data-hashtags="artofidea,azure,javascript,node.js,windows">Tweet</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-count="" data-via="goldglovecb" data-size="small" data-hashtags="artofidea,node.js,npm,mac,osx">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
               <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/Share" data-counter="right" data-showzero="true"></script>
@@ -168,13 +183,11 @@ and the multitude of packages that sprout up, but I am currently encouraged by w
     
       <li><a href="/cookbook\development\articles/fenix">Fenix</a> (3/30/2013)</li>
     
-      <li><a href="/cookbook\development\articles/mongoose-schema-structure">Mongoose Schema Structure</a> (8/26/2011)</li>
-    
       <li><a href="/cookbook\development\articles/node-windows">Introducing node-windows</a> (2/16/2013)</li>
     
-      <li><a href="/cookbook\development\articles/node-mac">Introducing node-mac</a> (5/18/2013)</li>
-    
       <li><a href="/cookbook\development\articles/node-windows2">New node-windows</a> (3/24/2013)</li>
+    
+      <li><a href="/cookbook\development\articles/nodejs-and-microsoft-azure">NodeJS & Microsoft Azure</a> (12/11/2011)</li>
     
     </ol>
   </div>

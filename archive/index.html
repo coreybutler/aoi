@@ -6,7 +6,7 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-Powered-By" content="DocPad"/>
+    <meta http-equiv="X-Powered-By" content="DocPad v6.34.2"/>
     <meta name="description" content="The blog of Corey Butler.">
     <meta name="author" content="Corey Butler (corey@coreybutler.com)">
     <meta name="keywords" content="goldglovecb, corey, butler, corey butler, node.js, javascript, ngn, thinkfirst, entrepreneur, coldfusion, ajax, html, web development, web design, git, programming, hacking, hackathon">
@@ -123,41 +123,7 @@
   </div>
     <a href="#" class="scrollup"></a>
     
-    <script >(function(){
-	// Did we just livereload?
-var log = true && localStorage && console && console.log && true;
-if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
-	localStorage.removeItem('/docpad-livereload/reloaded');
-	console.log('LiveReloaded at', new Date())
-}
-
-// Listen for the regenerated event
-// and perform a reload of the page when the event occurs
-var listen = function(){
-	var socket = io.connect('/docpad-livereload');
-	socket.on('regenerated',function(){
-		if ( log ) {
-	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
-}
-document.location.reload();
-	});
-};
-	if ( typeof io !== 'undefined' ) {
-		listen();
-	} else {
-		// Inject socket.io into our page then listen once loaded
-var inject = function(){
-	var t = document.createElement('script');
-	t.type = 'text/javascript';
-	t.async = true;
-	t.src = '/socket.io/socket.io.js';
-	t.onload = listen;
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(t,s);
-};
-		inject();
-	}
-})();</script><script defer="defer"  src="/../js/jquery.js"></script><script defer="defer"  src="/../js/bootstrap-tooltip-min.js"></script><script defer="defer"  src="/../js/jquery.scrollto-1.4.3.1-min.js"></script><script defer="defer"  src="/../js/jquery.localscroll-1.2.7-min.js"></script><script defer="defer"  src="/../js/common.js"></script>
+    <script defer="defer"  src="/../js/jquery.js"></script><script defer="defer"  src="/../js/bootstrap-tooltip-min.js"></script><script defer="defer"  src="/../js/jquery.scrollto-1.4.3.1-min.js"></script><script defer="defer"  src="/../js/jquery.localscroll-1.2.7-min.js"></script><script defer="defer"  src="/../js/common.js"></script>
     
     
     

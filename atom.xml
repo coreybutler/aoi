@@ -1,16 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>The Art of Idea</title>
-    <subtitle>The blog of Corey Butler.</subtitle>
-    <link href="http://artofidea.com/atom.xml" rel="self" />
-    <link href="The blog of Corey Butler." />
-    <updated>2013-03-30T22:32:20.955Z</updated>
-    <id>http://artofidea.com</id>
-    <author>
-        <name>Corey Butler</name>
-        <email>corey@coreybutler.com</email>
-    </author>
-    
+	<title>The Art of Idea</title>
+	<subtitle>The blog of Corey Butler.</subtitle>
+	<link href="http://artofidea.com/atom.xml" rel="self" />
+	<link href="The blog of Corey Butler." />
+	<updated>2013-05-19T01:25:54.046Z</updated>
+	<id>http://artofidea.com</id>
+	<author>
+		<name>Corey Butler</name>
+		<email>corey@coreybutler.com</email>
+	</author>
+	
+    <entry>
+      <title>Introducing node-mac</title>
+      <link href="http://artofidea.com/cookbook\development\articles/node-mac"/>
+      <updated>2013-05-18T05:00:00.000Z</updated>
+      <id>http://artofidea.com/cookbook\development\articles/node-mac</id>
+      <content type="html">&lt;p&gt;&lt;a href=&quot;http://github.com/coreybutler/node-mac&quot;&gt;node-mac&lt;/a&gt; allows developers to run Node.js scripts
+as native background processes on OSX.&lt;/p&gt;
+&lt;p&gt;By providing a wrapper around &lt;code&gt;launchd&lt;/code&gt;, node-mac is able to simplify the creation and management
+of background services on a Mac. This project is a port of &lt;a href=&quot;http://github.com/coreybutler/node-windows&quot;&gt;node-windows&lt;/a&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;div id=&quot;tldr&quot;&gt;
+  Run Node.js scripts as native background processes on OSX.
+  This is a port of &lt;a href=&quot;http://github.com/coreybutler/node-windows&quot;&gt;node-windows&lt;/a&gt;.
+&lt;/div&gt;
+
+&lt;p&gt;I&amp;#39;m still working on my Node.js distributed systems engine, which gets close to release every day.
+Developing apps on distributed systems poses unique challenges, such as replicating infrastructure.
+For example, you may develop on a Mac, but deploy on Windows. If you need a long-running
+process (like a web server), you have to rig up something or use a node daemon manager like &lt;code&gt;forever&lt;/code&gt;.
+While these node tools are very helpful, they&amp;#39;re redundant. The operating system already provides
+well tested capabilities for running background processes.&lt;/p&gt;
+&lt;p&gt;I previsouly released &lt;a href=&quot;http://github.com/coreybutler/node-windows&quot;&gt;node-windows&lt;/a&gt;, which supports
+th creation/management of background processes on Windows. Node-mac provides the same functionality
+with essentially the same API. While each of these modules are independent, they were designed with
+integration in mind. The goal is to ultimately provide a common API to create a background
+process from JavaScript, regardless of the operating system it is running on. While this responsibility
+is best suited for my upcoming platform, node-windows and node-mac go a long ways towards this goal.&lt;/p&gt;
+&lt;h2&gt;How-To&lt;/h2&gt;
+&lt;p&gt;Creating an OSX background process from code is pretty straightforward.&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;javascript&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Service = require(&lt;span class=&quot;string&quot;&gt;'node-mac'&lt;/span&gt;).Service;
+
+  &lt;span class=&quot;comment&quot;&gt;// Create a new service object&lt;/span&gt;
+  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; svc = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Service({
+    name:&lt;span class=&quot;string&quot;&gt;'Hello World'&lt;/span&gt;,
+    description: &lt;span class=&quot;string&quot;&gt;'The nodejs.org example web server.'&lt;/span&gt;,
+    script: &lt;span class=&quot;string&quot;&gt;'/path/to/helloworld.js'&lt;/span&gt;)
+  });
+
+  &lt;span class=&quot;comment&quot;&gt;// Listen for the &quot;install&quot; event, which indicates the&lt;/span&gt;
+  &lt;span class=&quot;comment&quot;&gt;// process is available as a service.&lt;/span&gt;
+  svc.on(&lt;span class=&quot;string&quot;&gt;'install'&lt;/span&gt;,&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(){
+    svc.start();
+  });
+
+  svc.install();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The code above creates the process on your Mac and makes it available from the Activity Monitor.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/coreybutler/node-mac/master/docs/helloworlddaemon.png&quot; alt=&quot;Windows Mac&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When the service is installed, it also creates log files for standard output and errors.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/coreybutler/node-mac/master/docs/helloworldlog.png&quot; alt=&quot;Mac log&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Like node-windows, node-mac leverages a Node.js wrapper that gives developers more control over how
+the background process responds to failures, crashes, etc. For full details, read the documentation
+on &lt;a href=&quot;https://github.com/coreybutler/node-mac&quot;&gt;Github&lt;/a&gt; or the &lt;a href=&quot;https://coreybutler.github.io/node-mac&quot;&gt;node-mac documentation portal&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;New Documentation&lt;/h2&gt;
+&lt;p&gt;I have been using &lt;a href=&quot;http://github.com/senchalabs/jsduck&quot;&gt;JSDuck&lt;/a&gt; to document Node.JS and other
+languages for a while now. I decided to put a little effort into using this system for node-windows
+and node-mac, even though the API&amp;#39;s are really small.&lt;/p&gt;
+&lt;h2&gt;Other Features&lt;/h2&gt;
+&lt;p&gt;I&amp;#39;ll likely add more as needed/requested and as time allows. I&amp;#39;m also open to contirbutions.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Now go forth and daemonize Node.js on your Mac. Then tell me how it goes via Github!&lt;/p&gt;
+</content>
+    </entry>
+  
     <entry>
       <title>Fenix</title>
       <link href="http://artofidea.com/cookbook\development\articles/fenix"/>

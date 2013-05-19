@@ -167,10 +167,10 @@ img.panel {
 }
 
 .subtitle {
-    font-size: 80%;
-    color: #aaa;
-    text-shadow: -1px 1px #fff;
-    margin-top:8px !important;
+	font-size: 80%;
+	color: #aaa;
+	text-shadow: -1px 1px #fff;
+	margin-top:8px !important;
 }
 
 .scrollup {

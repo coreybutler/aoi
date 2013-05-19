@@ -123,9 +123,9 @@ h1.title {
 }
 
 .subtitle {
-    font-size: 80%;
-    color: #ccc;
-    text-shadow: -1px 1px #fff;
+	font-size: 80%;
+	color: #ccc;
+	text-shadow: -1px 1px #fff;
 }
 
 #tldr {
@@ -177,15 +177,15 @@ h1.title {
 }
 
 .tldr {
-    padding: 1px 4px 1px 4px;
-    color: #333;
-    background: #f9fccf;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    text-shadow: 0px 1px 1px #666;
-    margin-left: 0px;
-    margin-top: -10px;
-    position: absolute;
+	padding: 1px 4px 1px 4px;
+	color: #333;
+	background: #f9fccf;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	text-shadow: 0px 1px 1px #666;
+	margin-left: 0px;
+	margin-top: -10px;
+	position: absolute;
 }
 blockquote p {
   /*font: 14px/18px normal "Courier New";*/
