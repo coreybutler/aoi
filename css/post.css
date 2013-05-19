@@ -1,6 +1,7 @@
 body {
   background: #FFFFFF url(../img/background.png) !important;
 }
+
 .page {
   padding: 0px 30px 20px 30px;
   background: #FFFFFF !important;
@@ -112,7 +113,7 @@ h2, h3 {
   -moz-transform:rotate(-90deg);
   -o-transform: rotate(-90deg);
   white-space:nowrap;
-  display:block; 
+  display:block;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
   text-shadow: 0px 0px 1px #999;
 }
@@ -135,7 +136,7 @@ h1.title {
   left: 0;
   max-height: 500px;
   overflow-y: auto;
-    
+
   -moz-box-shadow: 3px 3px 4px #999;
   -webkit-box-shadow: 3px 3px 4px #999;
   box-shadow: 0px 0px 4px #eee;
@@ -146,8 +147,8 @@ h1.title {
   /*border-top: 1px solid #ccc;*/
   border-top: 4px solid /*rgba(0,174,255,.87)*/rgba(43,86,151,1);
   text-indent: 23px;
-  min-height: 80px; 
-  height:auto !important; 
+  min-height: 80px;
+  height:auto !important;
   width: 100%;
 }
 
@@ -207,8 +208,8 @@ blockquote {
   background-position: middle left;
   background-repeat: no-repeat;
   text-indent: 23px;
-  min-height: 80px; 
-  height:auto !important; 
+  min-height: 80px;
+  height:auto !important;
   height: 80px;
   border-radius: 6px;
 }
@@ -217,11 +218,11 @@ blockquote:after {
   z-index: 15;
   margin-top: -58px;
   margin-right: -50px;
-  background: url(../img/quoteclosecode.gif) no-repeat scroll bottom right;   
+  background: url(../img/quoteclosecode.gif) no-repeat scroll bottom right;
   padding-right: 0px;
   display: block;
   width:auto;
-  min-height: 90px; 
-  height:auto !important; 
+  min-height: 90px;
+  height:auto !important;
   height: 90px;
 }
